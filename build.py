@@ -19,29 +19,37 @@ from string import Template
 import requests
 from bs4 import BeautifulSoup
 
-
 HOME=os.getenv("HOME")
 
-GEM_ROOT=HOME+"/public_gemini"
-GEM_BLOG="/blog"
 
+##
+## Variables de ubicación del blog
+##
+GEM_ROOT=HOME+"/public_gemini"
 HTML_ROOT=HOME+"/public_html"
+INSTALL_BUILD=HOME+"/web"
+
+
+##
+## Otras variables
+##
+GEM_BLOG="/blog"
 HTML_BLOG="/blog"
 
-POSTS_ROOT=HOME+"/web/blog"
+POSTS_ROOT=INSTALL_BUILD+"/blog"
 POSTS_INDEX=POSTS_ROOT+"/INDEX"
 
-HTML_FILE_BOOKS=HOME+"/public_html/books.html"
-HTML_TEMPLATE_BOOKS=HOME+"/web/templates/books-template.html"
+HTML_FILE_BOOKS=HTML_ROOT+"/books.html"
+HTML_TEMPLATE_BOOKS=INSTALL_BUILD+"/templates/books-template.html"
 
-GEM_FILE_BOOKS=HOME+"/public_gemini/books.gmi"
-GEM_TEMPLATE_BOOKS=HOME+"/web/templates/books-template.gmi"
+GEM_FILE_BOOKS=GEM_ROOT+"/books.gmi"
+GEM_TEMPLATE_BOOKS=INSTALL_BUILD+"/templates/books-template.gmi"
 
-GEM_INDEX_FILE=HOME+"/public_gemini/index.gmi"
-GEM_TEMPLATE_INDEX=HOME+"/web/templates/index-template.gmi"
+GEM_INDEX_FILE=GEM_ROOT+"/index.gmi"
+GEM_TEMPLATE_INDEX=INSTALL_BUILD+"/templates/index-template.gmi"
 
-HTML_TEMPLATE_BLOG=HOME+"/web/templates/blog-template.html"
-GEM_TEMPLATE_BLOG=HOME+"/web/templates/blog-template.gmi"
+HTML_TEMPLATE_BLOG=INSTALL_BUILD+"/templates/blog-template.html"
+GEM_TEMPLATE_BLOG=INSTALL_BUILD+"/templates/blog-template.gmi"
 
 
 
