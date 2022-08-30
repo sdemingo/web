@@ -1,5 +1,6 @@
 
-Este sencillo script es usado para construir mi blog personal.
+Este sencillo script es usado para construir mi blog personal tanto en formato
+html como en gemini.
 
 # Configuración de la cuenta de goodreads
 
@@ -22,6 +23,7 @@ incluir su nombre al final del fichero `blog/INDEX`. Tras esto podemos ejecutar
 el comando 
 
 - `build.py --blog`: Para construir el blog
-- `build.py --books`: Para construir la lista de últimas lecturas
+- `build.py --books`: Para construir la lista de últimas lecturas (solo si
+  `goodreads.py` esta creado)
 - `build.py --all`: Para construirlo todo
 
