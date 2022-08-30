@@ -16,6 +16,17 @@ adecuado a tres variables que encontraremos en la parte superior del fichero
   `~/public_html`.
 
 
+## Dependencias
+
+Para que este script funcione correctamente es necesario utilizarlo sobre un
+Linux convencional que debe tener instalado
+[`pandoc`](https://pandoc.org). Además hemos de tener las siguientes librerías
+de python disponibles en nuestro sistema:
+
+- [md2gemini](https://pypi.org/project/md2gemini/)
+- lxml
+- beautifullsoup4
+
 
 ## Configuración de la cuenta de goodreads
 
@@ -33,12 +44,19 @@ página de "My Books".
 
 ## Construcción y actualización
 
-Para incluir un nuevo post en el blog hemos de crear el fichero `.md` y luego
-incluir su nombre al final del fichero `blog/INDEX`. Tras esto podemos ejecutar
-el comando 
+Para incluir un nuevo post en el blog hemos de crear el fichero `.md` dentro del
+directorio `/blog`y luego incluir el nombre del fichero al final del fichero
+`blog/INDEX`. Tras esto podemos ejecutar el comando
 
 - `build.py --blog`: Para construir el blog
 - `build.py --books`: Para construir la lista de últimas lecturas (solo si
   `goodreads.py` esta creado)
 - `build.py --all`: Para construirlo todo
 
+
+```
+$ cd ~/web
+web$ echo "Nuevo post" > blog/nuevo-post.md
+web$ echo "12/11/2022     blog/nuevo-post.md" >> blog/INDEX
+web$ ./build.py -all
+```
