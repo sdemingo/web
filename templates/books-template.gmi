@@ -1,0 +1,25 @@
+
+```
+
+ ███████ ██████  ███████ ███    ███ ██ ███    ██  ██████   ██████  
+ ██      ██   ██ ██      ████  ████ ██ ████   ██ ██       ██    ██ 
+ ███████ ██   ██ █████   ██ ████ ██ ██ ██ ██  ██ ██   ███ ██    ██ 
+      ██ ██   ██ ██      ██  ██  ██ ██ ██  ██ ██ ██    ██ ██    ██ 
+ ███████ ██████  ███████ ██      ██ ██ ██   ████  ██████   ██████  
+                                                                 
+```
+
+
+=>index.gmi Inicio
+
+## Ahora mismo esto es lo que estoy leyendo
+
+$current
+
+[Última actualización: $lastDate]
+
+
+## Estas son mis últimas lecturas
+
+$lasts
+

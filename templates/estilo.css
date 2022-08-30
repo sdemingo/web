@@ -1,0 +1,183 @@
+
+/* Estilos generales */
+@font-face{
+    font-family:'Roboto Mono';
+    src:url(fonts/RobotoMono/RobotoMono-Light.ttf);
+}
+
+@font-face{
+    font-family:'Montserrat';
+    src:url(fonts/Montserrat/Montserrat-Regular.ttf);
+}
+
+@font-face{
+    font-family:'Montserrat-Italic';
+    src:url(fonts/Montserrat/Montserrat-Italic.ttf);
+}
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    width:65%;
+    margin:0 auto;
+    margin-bottom:100px;
+    /*background-color:#EFEFEF;*/
+    background-color:white;
+}
+
+header {
+    margin-top: 50px;
+    border-bottom: 1px solid #565858; 
+}
+
+header h1{
+    font-family:'Roboto Mono'
+}
+
+.light {
+    color:#565858; 
+}
+
+.bold{
+    font-weight:bold;
+}
+
+.center{
+    text-align: center;
+}
+
+
+h2{
+    font-weight: normal;
+    text-decoration: underline;
+}
+
+
+section+section{
+    margin-top:50px;
+}
+
+li{
+    margin-top:10px;
+}
+
+.date{
+    font-size:0.7em;
+    margin-top:5px;
+    margin-left:15px;
+}
+
+/* Estilo para listas anidadas */
+
+ul ul > li:last-child{
+    margin-bottom:30px;
+}
+
+a{
+    color:#565858;
+    text-decoration:none;
+}
+
+a:hover{
+    text-decoration:underline;
+}
+
+
+/* Estilos para imagenes */
+.imagen{
+    margin:30px 0px;
+}
+
+.imagen > p{
+    text-align:center;
+}
+
+.imagen img{
+    width:60%;
+}
+
+
+/* Barra de enlaces  */
+header + ul{
+    text-align:right;
+    margin-bottom:40px;
+}
+header + ul li{
+    list-decoration:none;
+    display:inline-block;
+    margin-left:50px;
+}
+
+
+/* Estilos para el footer  */
+hr{
+    margin:50px;
+    border:none;
+    background-color:silver;
+    height:1px;
+}
+
+hr + p{
+    text-align:right;
+    font-style:italic;
+}
+
+
+
+/* Estilo de código preformateado */
+
+code{
+    font-size:1.1em;
+    color:#161527;
+}
+
+pre{
+    border:1px solid silver;
+    border-radius: 5px;
+    background:#F9F9F9;
+    padding:5px;
+    width:90%;
+    margin:0 auto;
+}
+
+pre code{
+    font-size:1.0em;
+    color:black;
+    font-weight:normal;
+}
+
+
+/*  Estilo para anotaciones  */
+blockquote{
+    font-family:'Montserrat-Italic';
+    padding:3px 10px;
+    border-left:3px solid #565858;
+}
+
+
+
+
+/*  Responsive   */
+
+@media all and (max-width: 500px ){
+    body{
+	font-size:1.3em;
+        width:95%;
+    }
+
+    .date{
+	font-size:0.6em;
+    }
+
+    code{
+	font-size:0.9em;
+    }
+    pre{
+	width:100%;
+	font-size:0.8em;
+    }
+
+    .imagen img{
+	width:90%;
+    }
+}

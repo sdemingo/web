@@ -1,0 +1,38 @@
+
+```
+
+ ███████ ██████  ███████ ███    ███ ██ ███    ██  ██████   ██████  
+ ██      ██   ██ ██      ████  ████ ██ ████   ██ ██       ██    ██ 
+ ███████ ██   ██ █████   ██ ████ ██ ██ ██ ██  ██ ██   ███ ██    ██ 
+      ██ ██   ██ ██      ██  ██  ██ ██ ██  ██ ██ ██    ██ ██    ██ 
+ ███████ ██████  ███████ ██      ██ ██ ██   ████  ██████   ██████  
+                                                                 
+```
+
+
+Bienvenido a mi cápsula gémini. Entre estas publicaciones encontrarás artículos sobre mis principales temas de interés:
+
+* Programación y cacharreo
+* Bicicletas y ciclismo
+* Libros y comics
+
+De todo ello hablo con más o menos frecuencia tanto en mi blog personal:
+
+=> blog/index.gmi Blog personal (Último post: $last)
+=> books.gmi Mis últimas lecturas
+=> ring.gmi  Cápsulas amigas
+
+Otros enlaces sobre mi:
+
+=> http://texto-plano.xyz/~sdemingo web en texto-plano
+=> http://github.com/sdemingo Mi Github
+
+
+Para contactar conmigo puedes encontrarme en:
+
+* Por xmpp en sdemingo [arroba] suchat.org
+* Por correo en sdemingo [arroba] texto-plano.xyz
+* Por IRC soy sdemingo en irc.tilde.chat
+
+
+

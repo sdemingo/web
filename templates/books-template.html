@@ -1,0 +1,54 @@
+<html>
+  <head></head>
+
+  <!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="estilo.css">
+    <style>
+      span.bookdate, p.update{
+	  font-size:0.7em;
+      }
+      span.author{
+	  font-style:italic;
+      }
+      td.title{
+	  vertical-align:middle;
+	  padding-left:20px;
+      }
+      table{
+	  margin:40px 0px;
+      }
+
+      main > p:first-child{
+	  margin-top:50px;
+      }
+      
+    </style>
+    <body>
+      <header>
+	<h1><span class="light">&#36;</span> sdemingo</h1>
+      </header>
+      <ul>
+	<li><a href="index.html">Inicio</a></li>   
+      </ul>
+
+      <main>
+	<h2>Ahora mismo estoy leyendo ...</h2>
+	<table>
+	  $current
+	</table>
+	<p class="update">Última actualización: $lastDate</p>
+	<h2>Últimas lecturas</h2>
+	<table>
+	  $lasts
+	</table>
+      </main>
+    <body>
+</html>
