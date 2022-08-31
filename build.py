@@ -316,7 +316,6 @@ def buildListGemText(reads):
 
 
 def buildBooks():
-
   if (not (('currently' in globals()) and ('lasts' in globals()))):
     print ("No goodreads info. Ignore build")
     return
@@ -389,7 +388,24 @@ def buildGemIndex():
          with open(GEM_INDEX_FILE,"w") as o:
              o.write(html)
              print ("Build index.gmi")
-    
+
+             
+def buildHTMLIndex():
+  cmd="cp {dir1}/index-template.html {dir2}/index.html".format(
+            dir1=INSTALL_BUILD+"/templates",
+            dir2=HTML_ROOT)
+  print ("Build index.html")
+  os.system(cmd)
+
+
+def buildCSS():
+  cmd="cp {dir1}/estilo.css {dir2}".format(
+            dir1=INSTALL_BUILD+"/templates",
+            dir2=HTML_ROOT)
+  print ("Build estilo.css")
+  os.system(cmd)
+  
+  
 
 if __name__=='__main__':
 
@@ -415,12 +431,7 @@ if __name__=='__main__':
     buildBlog()
     buildBooks()
     buildGemIndex()
-    
-  cmd="cp {dir1}/estilo.css {dir2}".format(
-            dir1=HOME+"/web/templates",
-            dir2=HTML_ROOT)
-  print ("Build estilo.css")
-  os.system(cmd)
-
+    buildHTMLIndex()
+    buildCSS()
 
 
