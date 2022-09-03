@@ -400,7 +400,7 @@ def buildHTMLIndex():
 
 def buildCSS():
   cmd="cp {dir1}/estilo.css {dir2}".format(
-            dir1=INSTALL_BUILD+"/templates",
+            dir1=INSTALL_BUILD+"/resources",
             dir2=HTML_ROOT)
   print ("Build estilo.css")
   os.system(cmd)
