@@ -78,6 +78,7 @@ def md2gemtext(filename):
       month=matches.group(1)
     markdown = re.sub(date_sign,"",markdown, re.MULTILINE)
 
+    # Genero el codigo gemini
     gemini = md2gemini(markdown, links="at-end")
 
     # Saneo gemini para cambiar:
@@ -118,17 +119,17 @@ def buildPost(post):
     print ("El fichero "+mdfile+" no tiene título en la primera línea")
     return
 
+  # Build the HTML
   if fileChanged(pathFile,HTML_ROOT+HTML_BLOG+"/"+mdfile+".html"):
-    # Build the HTML
     cmd="pandoc -s --css ../estilo.css {dir1}/{file} -o {dir2}/{file}.html".format(
       dir1=POSTS_ROOT,
       file=mdfile,
       dir2=HTML_ROOT+HTML_BLOG)
     print ("Build "+mdfile+".hml")
     os.system(cmd)
-        
+
+  # Build the Gemtext file
   if fileChanged(pathFile,GEM_ROOT+GEM_BLOG+"/"+mdfile+".gmi"):
-    # Build the Gemtext file
     gem=md2gemtext(pathFile)
     
     with open(GEM_ROOT+GEM_BLOG+"/"+mdfile+".gmi","w") as fg:
