@@ -122,6 +122,10 @@ hr + p{
     font-style:italic;
 }
 
+.aviso{
+    font-size:0.7em;
+    color: #565858;
+}
 
 
 /* Estilo de código preformateado */

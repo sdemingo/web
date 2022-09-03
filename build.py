@@ -176,7 +176,6 @@ def buildHTMLIndexBlog():
 
        
 def buildGemIndexBlog():
-
   postsList=""
   for fileInfo in files:
     post="=>{url}.gmi {text}".format(
@@ -195,8 +194,6 @@ def buildGemIndexBlog():
       print ("Build blog.gmi")
      
   
-
-
         
 def getPosts():
   posts=[]
@@ -220,7 +217,7 @@ def getPosts():
 
 
 
-def buildBlog():
+def buildBlog(htmlonly=False):
   if not os.path.exists(HTML_ROOT+HTML_BLOG):
     os.makedirs(HTML_ROOT+HTML_BLOG)
         
@@ -232,7 +229,8 @@ def buildBlog():
     buildPost(post)
 
   buildHTMLIndexBlog()
-  buildGemIndexBlog()
+  if (not htmlonly):
+    buildGemIndexBlog()
 
 
 
@@ -314,7 +312,7 @@ def buildListGemText(reads):
   return readstext
 
 
-def buildBooks():
+def buildBooks(htmlonly=False):
   if (not (('currently' in globals()) and ('lasts' in globals()))):
     print ("No goodreads info. Ignore build")
     return
@@ -324,27 +322,29 @@ def buildBooks():
   lastReads=getReads(lasts)
   currTable=buildTableHTML(curReads)
   lastList=buildListHTML(lastReads[:20])
-  
+
+
   with open(HTML_TEMPLATE_BOOKS) as t:
     strTmpl=t.read()
     tmpl=Template(strTmpl)
     html=tmpl.substitute(current=currTable,lasts=lastList,lastDate=todayDate)
-
+    
     with open(HTML_FILE_BOOKS,"w") as o:
       o.write(html)
-      print ("Build books.gmi")
-
-  currTable=buildTableGemText(curReads)
-  lastList=buildListGemText(lastReads[:20])
-
-  with open(GEM_TEMPLATE_BOOKS) as t:
-    strTmpl=t.read()
-    tmpl=Template(strTmpl)
-    html=tmpl.substitute(current=currTable,lasts=lastList,lastDate=todayDate)
-
-    with open(GEM_FILE_BOOKS,"w") as o:
-      o.write(html)
       print ("Build books.html")
+
+    currTable=buildTableGemText(curReads)
+    lastList=buildListGemText(lastReads[:20])
+
+  if (not htmlonly):
+    with open(GEM_TEMPLATE_BOOKS) as t:
+      strTmpl=t.read()
+      tmpl=Template(strTmpl)
+      html=tmpl.substitute(current=currTable,lasts=lastList,lastDate=todayDate)
+
+      with open(GEM_FILE_BOOKS,"w") as o:
+        o.write(html)
+        print ("Build books.gmi")
 
 
 
@@ -414,7 +414,7 @@ if __name__=='__main__':
     print ("No goodreads.py module. Books cannot be build")
     
   if len(sys.argv)<2:
-    print ("\t\t build.py [ --all | --blog | --books ]")
+    print ("\t\t build.py [ --all | --blog | --books | --htmlonly ] ")
     sys.exit(0)
 
   if sys.argv[1]=="--books":
@@ -425,7 +425,14 @@ if __name__=='__main__':
     buildBlog()
     buildGemIndex()
     sys.exit(0)
-            
+
+  if sys.argv[1]=="--htmlonly":
+    buildBlog(True)
+    buildBooks(True)
+    #buildGemIndex()
+    buildHTMLIndex()
+    buildCSS()
+
   if sys.argv[1]=="--all":
     buildBlog()
     buildBooks()
