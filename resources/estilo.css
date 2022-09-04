@@ -74,9 +74,8 @@ ul ul > li:last-child{
 }
 
 a{
-    color:#565858;
     color:#6e6e6e;
-    text-decoration:none;
+    text-decoration:underline;
 }
 
 a:hover{
