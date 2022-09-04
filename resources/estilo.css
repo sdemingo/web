@@ -21,7 +21,6 @@ body {
     width:65%;
     margin:0 auto;
     margin-bottom:100px;
-    /*background-color:#EFEFEF;*/
     background-color:white;
 }
 
@@ -35,7 +34,8 @@ header h1{
 }
 
 .light {
-    color:#565858; 
+    color:#565858;
+
 }
 
 .bold{
@@ -75,6 +75,7 @@ ul ul > li:last-child{
 
 a{
     color:#565858;
+    color:#6e6e6e;
     text-decoration:none;
 }
 
