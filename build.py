@@ -3,14 +3,14 @@
 # Script para reconstruir tanto el blog como la sección de últimas lecturas
 # y para actualizar los index tanto de gémini como de la versión web
 # 
-# Dependencias:
-#  - md2gemini: https://pypi.org/project/md2gemini/  (pip3 install md2gemini)
+# Dependencias: (pip3 install ...)
+#  - md2gemini
 #  - lxml
 #  - beautifullsoup4
-
+#  - feedgen
 
 from string import Template
-from datetime import datetime
+from datetime import datetime, timezone
 import os
 import sys
 import re
@@ -18,6 +18,9 @@ from md2gemini import md2gemini
 from string import Template
 import requests
 from bs4 import BeautifulSoup
+from feedgen.feed import FeedGenerator
+import urllib.parse
+
 
 HOME=os.getenv("HOME")
 
@@ -105,6 +108,7 @@ def md2gemtext(filename):
 def buildPost(post):
   mdfile=post[0]
   date=post[1]
+  
     
   # First extract the title
   pathFile="{dir}/{file}".format(dir=POSTS_ROOT,file=mdfile)
@@ -138,7 +142,8 @@ def buildPost(post):
     print ("Build "+mdfile+".gmi")
     
   # Add to the files info
-  files.append((mdfile,title,date))
+  mdcontent="".join(lines)
+  files.append((mdfile,title,date,mdcontent))
 
     
 def fileChanged(f1,f2):
@@ -235,7 +240,34 @@ def buildBlog(htmlonly=False):
 
 
 
+def buildFeed():
 
+  fg = FeedGenerator()
+  fg.link( href='http://texto-plano.xyz/atom.xml', rel='self' )
+  fg.title('PanicError')
+  fg.author( {'name':'sdemingo','email':'sdemingo@texto-plano.xyz'} )
+  fg.language('es')
+  fg.id("http://texto-plano.xyz/~sdemingo/atom.xml")
+  
+  for fileInfo in files:
+    fe = fg.add_entry()
+    url="http://"+urllib.parse.quote("texto-plano.xyz/~sdemingo/blog/"+fileInfo[0]+".html")
+    fe.id(url)
+    fe.title(fileInfo[1])
+    tdate=datetime.strptime(fileInfo[2],"%d/%m/%Y").replace(tzinfo=timezone.utc)
+    fe.published(tdate)
+    fe.updated(tdate)
+    fe.content(url)
+    fe.link(href=url)
+  
+  atomfeed = fg.atom_str(pretty=True)
+  fg.atom_file(INSTALL_BUILD+"/atom.xml")
+
+  cmd="cp {dir1}/atom.xml {dir2}/blog/atom.xml".format(
+    dir1=INSTALL_BUILD,
+    dir2=HTML_ROOT)
+  print ("Build atom.xml")
+  os.system(cmd)
 
 
 
@@ -433,6 +465,7 @@ if __name__=='__main__':
     #buildGemIndex()
     buildHTMLIndex()
     buildCSS()
+    buildFeed()
 
   if sys.argv[1]=="--all":
     buildBlog()
@@ -440,5 +473,5 @@ if __name__=='__main__':
     buildGemIndex()
     buildHTMLIndex()
     buildCSS()
-
+    buildFeed()
 
