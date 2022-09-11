@@ -82,6 +82,10 @@ a:hover{
     text-decoration:underline;
 }
 
+a.black{
+    color:black;
+}
+
 
 /* Estilos para imagenes */
 .imagen{
