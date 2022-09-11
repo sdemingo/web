@@ -462,7 +462,6 @@ if __name__=='__main__':
   if sys.argv[1]=="--htmlonly":
     buildBlog(True)
     buildBooks(True)
-    #buildGemIndex()
     buildHTMLIndex()
     buildCSS()
     buildFeed()

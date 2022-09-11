@@ -26,11 +26,12 @@ body {
 
 header {
     margin-top: 50px;
-    border-bottom: 1px solid #565858; 
+    margin-bottom: 50px;
+    /*border-bottom: 1px solid #565858;*/ 
 }
 
 header h1{
-    font-family:'Roboto Mono'
+    font-family:'Roboto Mono';
 }
 
 .light {
