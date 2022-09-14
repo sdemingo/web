@@ -74,6 +74,12 @@ ul ul > li:last-child{
     margin-bottom:30px;
 }
 
+ul#blog-index li{
+    list-style:none;
+}
+
+/* Estilo para enlaces */
+
 a{
     color:#6e6e6e;
     text-decoration:underline;
