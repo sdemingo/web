@@ -43,6 +43,12 @@ header h1{
     font-weight:bold;
 }
 
+
+.black{
+    color:black;
+}
+
+
 .center{
     text-align: center;
 }
@@ -68,6 +74,8 @@ li{
     margin-left:15px;
 }
 
+
+
 /* Estilo para listas anidadas */
 
 ul ul > li:last-child{
@@ -87,10 +95,6 @@ a{
 
 a:hover{
     text-decoration:underline;
-}
-
-a.black{
-    color:black;
 }
 
 
