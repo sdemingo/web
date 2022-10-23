@@ -186,7 +186,7 @@ def buildGemIndexBlog():
   for fileInfo in files:
     post="=>{url}.gmi {text}".format(
       url=fileInfo[0],
-      text=fileInfo[1])
+      text=fileInfo[1].strip("\n"))
     postsList+="\n"+post
 
   with open(GEM_TEMPLATE_BLOG) as t:
@@ -194,7 +194,7 @@ def buildGemIndexBlog():
     tmpl=Template(strTmpl)
     gmi=tmpl.substitute(posts=postsList)
     
-    with open(GEM_ROOT+GEM_BLOG+"/index.html","w") as o:
+    with open(GEM_ROOT+GEM_BLOG+"/index.gmi","w") as o:
       o.write(gmi)
       o.close()
       print ("Build blog.gmi")
