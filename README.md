@@ -6,7 +6,7 @@ html como en gemini.
 
 Para configurar correctamente el script a nuestro entorno hemos de dar el valor
 adecuado a tres variables que encontraremos en la parte superior del fichero
-`build.py`. Estas variables son:
+`build`. Estas variables son:
 
 - `INSTALL_BUILD`: Ruta de instalacion del script en nuestra cuenta
   personal. por defecto es `~/web`.
@@ -48,15 +48,15 @@ Para incluir un nuevo post en el blog hemos de crear el fichero `.md` dentro del
 directorio `/blog`y luego incluir el nombre del fichero al final del fichero
 `blog/INDEX`. Tras esto podemos ejecutar el comando
 
-- `build.py --blog`: Para construir el blog
-- `build.py --books`: Para construir la lista de últimas lecturas (solo si
+- `build --blog`: Para construir el blog
+- `build --books`: Para construir la lista de últimas lecturas (solo si
   `goodreads.py` esta creado)
-- `build.py --all`: Para construirlo todo
+- `build --all`: Para construirlo todo
 
 
 ```
 $ cd ~/web
 web$ echo "Nuevo post" > blog/nuevo-post.md
 web$ echo "12/11/2022     blog/nuevo-post.md" >> blog/INDEX
-web$ ./build.py -all
+web$ ./build --all
 ```
