@@ -1,6 +1,5 @@
-% Hábitos lectores
+# Hábitos lectores
 
-- [Inicio](../index.html)
 
 
 El otro día hablaba con un compañero de trabajo sobre la lectura y los hábitos
@@ -31,7 +30,7 @@ asunto de "que es leer y que no". Asumíamos que leer un libro era leer. Tanto e
 papel como en formato electrónico. Pero ¿qué ocurre con Internet? ¿La prensa?
 ¿Acaso hemos de contabilizar cualquier libro como lectura por vacío de contenido
 que sea y no contabilizar como lectura un periódico digital? El único argumento
-a favor de libro es su facilidad para la estadística. ¿Como contabilizar en
+a favor de el libro es su facilidad para la estadística. ¿Como contabilizar en
 cifras tus hábitos lectores si sueles consumir prensa digital? Considero al
 libro (y a la imprenta que lo produce), el mayor avance de la civilización tras
 el fuego, la rueda y quizás el frigorífico. Pero no hemos de olvidar que el

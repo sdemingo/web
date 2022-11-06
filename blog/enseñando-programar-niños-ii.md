@@ -1,7 +1,6 @@
-% Enseñando a programar a un niño (II)
+# Enseñando a programar a un niño (II)
 
 - [1º Parte](enseñando-programar-niños.md.html)
-- [Inicio](../index.html)
 
 Hemos estado estas últimas semanas trabajando en sesiones cortas con Logo y creo que hemos avanzado bastante. Voy a resumiros brevemente los principales avances con algunos ejercicios que he planteado. Lo primero, lógicamente, ha sido comprender los comandos básicos (avanzar o `fd`, girar `rt` o `lt`, etc.). Para ello usar figuras sencillas como rectángulos o cuadrados es fundamental.
 

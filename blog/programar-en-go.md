@@ -1,6 +1,4 @@
-% Programar en Go
-
-- [Inicio](../index.html)
+# Programar en Go
 
 
 

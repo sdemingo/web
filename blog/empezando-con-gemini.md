@@ -1,6 +1,4 @@
-%Empezando con Gemini
-
-- [Inicio](../index.html)
+# Empezando con Gemini
 
 
 Había oído hablar de este protocolo en algún artículo perdido de reddit hace

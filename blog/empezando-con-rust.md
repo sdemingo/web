@@ -1,6 +1,5 @@
-%Empezando con Rust
+# Empezando con Rust
 
-- [Inicio](../index.html)
 
 Todos los que somos aficionados a la programación y pica-teclas de profesión o
 vocación llevamos ya varios años oyendo hablar de

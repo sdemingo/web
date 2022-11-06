@@ -1,6 +1,5 @@
-% El verano, los niños y el aburrimiento
+# El verano, los niños y el aburrimiento
 
-- [Inicio](../index.html)
 
 El verano y los niños no siempre son dos conceptos que casan bien. Para los
 primeros, demasiado tiempo libre suele ser sinónimo de aburrimiento. Y el

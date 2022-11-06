@@ -1,6 +1,5 @@
-% De vuelta al barro
+# De vuelta al barro
 
-- [Inicio](../index.html)
 
 Dejé de usar Twitter en noviembre del 2017. En ese momento la situación política
 en España era muy complicada y la toxicidad que se respiraba en las redes

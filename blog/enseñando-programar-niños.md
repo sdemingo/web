@@ -1,6 +1,5 @@
-%Enseñando a programar a un niño
+# Enseñando a programar a un niño
 
-- [Inicio](../index.html)
 
 
 ¿Cuál es el lenguaje más apropiado para aprender a programar? Ni se las veces

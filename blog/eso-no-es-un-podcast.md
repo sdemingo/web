@@ -1,6 +1,5 @@
-% Eso no es un podcast
+# Eso no es un podcast
 
-- [Inicio](../index.html)
 
 
 No descubro nada cuando digo que el fenómeno podcast es toda una realidad. Por

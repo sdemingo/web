@@ -1,6 +1,5 @@
-% Emacs como lector de feeds
+# Emacs como lector de feeds
 
-- [Inicio](../index.html)
 
 
 Mi relación con el editor Emacs ha sido larga. Y, tal vez por eso, ha pasado por

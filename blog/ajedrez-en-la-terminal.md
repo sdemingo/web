@@ -1,7 +1,4 @@
-% Ajedrez en la terminal
-
-- [Inicio](../index.html)
-
+# Ajedrez en la terminal
 
 Llevo unos días trasteando con una pequeño programa que me encontré de casualidad rastreando por Github. Consistía en una pequeña interfaz de texto orientada a terminal de comandos construida sobre [Bubbletea](https://github.com/charmbracelet/bubbletea), una pequeña librería para hacer interfaces de texto con un aspecto muy cuidado. La interfaz, además de utilizar dicha librería para dibujar un tablero y las piezas utilizaba otra librería llamada [Dragontooth Movegen](https://pkg.go.dev/github.com/dylhunn/dragontoothmg) para controlar los movimientos legales del juego. Así que empecé a darle vueltas a la idea de engancharla un servidor para poder jugar partidas a dos. Sería una buena aplicación para poder utilizarla en un servidor compartido en el que no se disponga de entorno gráfico.
 

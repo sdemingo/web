@@ -1,6 +1,5 @@
-% Negacionistas del desastre
+# Negacionistas del desastre
 
-- [Inicio](../index.html)
 
 A raíz de una conversación reciente con un amigo sobre "No mires arriba", el
 último estreno de Netflix, me vino a la cabeza  una novela de ciencia ficción que leí

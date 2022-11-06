@@ -1,6 +1,5 @@
-% Una reflexión sobre la sonda DART
+# Una reflexión sobre la sonda DART
 
-- [Inicio](../index.html)
 
 Esta misma semana hemos sido testigos de un acontecimiento relacionado con el
 espacio y la ciencia aeroespacial al que quizás no le hayamos dado la

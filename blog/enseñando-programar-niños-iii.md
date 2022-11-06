@@ -1,10 +1,9 @@
-% Enseñando a programar a un niño (III)
+# Enseñando a programar a un niño (III)
 
 - [1º Parte](enseñando-programar-niños.md.html)
 
 - [2º Parte](enseñando-programar-niños-ii.md.html)
 
-- [Inicio](../index.html)
 
 
 La navidad ha pasado rápido y no hemos tenido tanto tiempo para practicar como

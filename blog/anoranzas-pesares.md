@@ -1,6 +1,5 @@
-% Añoranzas y pesares
+# Añoranzas y pesares
 
-- [Inicio](../index.html)
 
 
 Termino el mes de Abril leyendo todo un clásico del genero fantástico: El Trono

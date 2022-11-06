@@ -1,6 +1,5 @@
-% Abandonando la escritura a mano
+# Abandonando la escritura a mano
 
-- [Inicio](../index.html)
 
 Después de una semana bastante horripilante en cuanto a carga de trabajo, hoy
 por fin me he podido parar un rato a escribir. Esta semana apenas he escrito

@@ -1,6 +1,4 @@
-% Gemini como solución, o no
-
-- [Inicio](../index.html)
+# Gemini como solución, o no
 
 
 Conocí Gemini hace aproximadamente dos meses. Durante ese tiempo he estado

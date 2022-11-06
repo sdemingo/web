@@ -1,6 +1,5 @@
-% Recordando ncurses
+# Recordando ncurses
 
-- [Inicio](../index.html)
 
 Ahora que va terminando el año y empiezo a tener algo más de tiempo me he puesto a tirar de la lista de cosas pendientes que he ido dejando por el camino.
 
