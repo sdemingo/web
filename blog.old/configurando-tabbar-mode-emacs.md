@@ -1,6 +1,4 @@
-% Configurando el Tabbar Mode
-
-- [Inicio](../index.html)
+# Configurando el Tabbar Mode
 
 
 La última receta para Emacs en la que he estado trabajado ha sido la

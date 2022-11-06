@@ -1,7 +1,4 @@
-% Aplicación Web en Go (II)
-
-- [Inicio](../index.html)
-
+# Aplicación Web en Go (II)
 
 
 Continuo con el [tema abierto hace unos días](../posts.html/web-app-en-go-1.md.html) sobre la programación de

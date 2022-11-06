@@ -1,6 +1,4 @@
-% Guardando marcadores en Orgmode
-
-- [Inicio](../index.html)
+# Guardando marcadores en Orgmode
 
 
 Hace ya algunos años decidí abandonar los servicios de *bookmarks* en Internet

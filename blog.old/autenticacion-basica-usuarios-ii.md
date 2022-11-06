@@ -1,7 +1,4 @@
-% Autenticación básica de usuarios (II)
-
-- [Inicio](../index.html)
-
+# Autenticación básica de usuarios (II)
 
 
 Hace unos días publiqué un post sobre [como realizar una conexión segura en un

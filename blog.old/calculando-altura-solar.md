@@ -1,4 +1,4 @@
-% Calculando la altura solar
+# Calculando la altura solar
 
 Situar la posición del una estrella en el cielo es una tarea básica a la hora de
 iniciar un estudio u observación sobre esta. Al igual que sobre la tierra, para

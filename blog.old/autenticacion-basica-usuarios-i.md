@@ -1,6 +1,4 @@
-% Autenticación básica de usuarios (I)
-
-- [Inicio](../index.html)
+# Autenticación básica de usuarios (I)
 
 La autenticación de usuarios es un paso básico y primordial en toda aplicación
 web y si estamos trabajando fuera del Google App Engine tendremos que montarnos

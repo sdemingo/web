@@ -1,6 +1,4 @@
-% Aplicación Web en Go (I)
-
-- [Inicio](../index.html)
+# Aplicación Web en Go (I)
 
 
 Llevo unos días tirando código de una pequeña *webapp* para ir familiarizándome

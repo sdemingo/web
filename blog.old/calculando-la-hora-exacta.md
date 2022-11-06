@@ -1,4 +1,4 @@
-% Calculando la hora exacta
+# Calculando la hora exacta
 
 Una de las primeras nociones básicas que más desconciertan al que se inicia en
 la astronomía de posición es el cálculo de la hora con respecto a la posición

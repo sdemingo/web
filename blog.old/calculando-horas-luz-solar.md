@@ -1,4 +1,4 @@
-% Calculando las horas de luz solar
+# Calculando las horas de luz solar
 
 
 El mes pasado comentaba al final del [artículo sobre el cálculo de la altura

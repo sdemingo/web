@@ -1,6 +1,4 @@
-% Emacs como editor para Python
-
-- [Inicio](../index.html)
+# Emacs como editor para Python
 
 
 Siempre que he programado Python he usado Emacs como entorno de desarrollo pero

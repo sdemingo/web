@@ -1,6 +1,4 @@
-% Macros para LaTeX en Emacs
-
-- [Inicio](../index.html)
+# Macros para LaTeX en Emacs
 
 
 Este verano he estado experimentando y trabajando con los bufferes en Emacs con

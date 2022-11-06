@@ -1,6 +1,4 @@
-% Encaminamiento IP por origen
-
-- [Inicio](../index.html)
+# Encaminamiento IP por origen
 
 
 Terminado el curso y con todo el papeleo ya *finiquitado* tengo algo de tiempo

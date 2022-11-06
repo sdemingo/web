@@ -1,7 +1,4 @@
-% Interfaces y wrappers en Go
-
-- [Inicio](../index.html)
-
+# Interfaces y wrappers en Go
 
 
 Este mes he seguido trasteando con Google App Engine y me gustaría enseñaros un pequeño

@@ -1,6 +1,4 @@
-% Evaluando expresiones con un AST
-
-- [Inicio](../index.html)
+# Evaluando expresiones con un AST
 
 
 A pesar de haber tenido una semana bien liada, he podido juntar algún rato este
