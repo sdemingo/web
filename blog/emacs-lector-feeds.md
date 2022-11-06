@@ -73,7 +73,7 @@ adapta perfectamente a las dimensiones de la pantalla.
   (define-key eww-mode-map "." 'eww-toogle-fill-line))
 ```
 
-Para terminar configuro algo de margen derecho al contenido y así evitar que se
+Para terminar configuro algo de margen izquierdo al contenido y así evitar que se
 me pegue al borde de la pantalla. En monitores grandes esto es indiferente pero
 en la pantalla del móvil este efecto me generaba muchas molestias.
 

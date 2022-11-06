@@ -471,7 +471,7 @@ if __name__=='__main__':
     buildBooks(True)
     buildHTMLIndex()
     buildCSS()
-    #buildFeed()
+    buildFeed()
 
   if sys.argv[1]=="--all":
     buildBlog()
