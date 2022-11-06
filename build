@@ -8,6 +8,7 @@
 #  - lxml
 #  - beautifullsoup4
 #  - feedgen
+#  - markdown
 
 from string import Template
 from datetime import datetime, timezone
@@ -20,7 +21,7 @@ import requests
 from bs4 import BeautifulSoup
 from feedgen.feed import FeedGenerator
 import urllib.parse
-
+import markdown
 
 HOME=os.getenv("HOME")
 
@@ -52,6 +53,7 @@ GEM_INDEX_FILE=GEM_ROOT+"/index.gmi"
 GEM_TEMPLATE_INDEX=INSTALL_BUILD+"/templates/index-template.gmi"
 
 HTML_TEMPLATE_BLOG=INSTALL_BUILD+"/templates/blog-template.html"
+HTML_TEMPLATE_BLOG_POST=INSTALL_BUILD+"/templates/blog-post-template.html"
 GEM_TEMPLATE_BLOG=INSTALL_BUILD+"/templates/blog-template.gmi"
 
 
@@ -105,32 +107,37 @@ def md2gemtext(filename):
   return gemini
 
 
+def extractTitleFromMD(mdcontent):
+    regex = r"^# (.+)"
+    test_str=mdcontent
+    matches = re.search(regex, test_str, re.MULTILINE)
+    if (matches==None):
+        return ""
+    return matches.groups()[0]
+
+
 def buildPost(post):
   mdfile=post[0]
   date=post[1]
   
-    
-  # First extract the title
   pathFile="{dir}/{file}".format(dir=POSTS_ROOT,file=mdfile)
-  with open(pathFile) as f:
-    lines=f.readlines()
+  f= open(pathFile)
+  mdcontent=f.read()
+  title=extractTitleFromMD(mdcontent).strip("#")
 
-  if (len(lines)==0):
-    return
-    
-  title=lines[0].strip("%")
-  if (len(title)==0):
-    print ("El fichero "+mdfile+" no tiene título en la primera línea")
-    return
+  with open(HTML_TEMPLATE_BLOG_POST) as t:
+    postTemplate=Template(t.read())
+    if postTemplate=="":
+      return
 
   # Build the HTML
   if fileChanged(pathFile,HTML_ROOT+HTML_BLOG+"/"+mdfile+".html"):
-    cmd="pandoc -s --css ../estilo.css {dir1}/{file} -o {dir2}/{file}.html".format(
-      dir1=POSTS_ROOT,
-      file=mdfile,
-      dir2=HTML_ROOT+HTML_BLOG)
-    print ("Build "+mdfile+".hml")
-    os.system(cmd)
+    htmlpost = markdown.markdown(mdcontent,extensions=['tables','fenced_code'])
+    html=postTemplate.substitute(post=htmlpost,post_title=title)
+    with open(HTML_ROOT+HTML_BLOG+"/"+mdfile+".html","w") as fh:
+      fh.write(html)
+      fh.close();
+    print ("Build "+mdfile+".html")
 
   # Build the Gemtext file
   if fileChanged(pathFile,GEM_ROOT+GEM_BLOG+"/"+mdfile+".gmi"):
@@ -142,7 +149,7 @@ def buildPost(post):
     print ("Build "+mdfile+".gmi")
     
   # Add to the files info
-  mdcontent="".join(lines)
+  #mdcontent="".join(lines)
   files.append((mdfile,title,date,mdcontent))
 
     
@@ -464,7 +471,7 @@ if __name__=='__main__':
     buildBooks(True)
     buildHTMLIndex()
     buildCSS()
-    buildFeed()
+    #buildFeed()
 
   if sys.argv[1]=="--all":
     buildBlog()
