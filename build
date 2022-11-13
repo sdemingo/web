@@ -6,7 +6,7 @@
 # Dependencias: (pip3 install ...)
 #  - md2gemini
 #  - lxml
-#  - beautifullsoup4
+#  - beautifulsoup4
 #  - feedgen
 #  - markdown
 
@@ -29,8 +29,8 @@ HOME=os.getenv("HOME")
 ##
 ## Variables de ubicación del blog
 ##
-GEM_ROOT=HOME+"/public_gemini"
-HTML_ROOT=HOME+"/public_html"
+GEM_ROOT=HOME+"/gemini"
+HTML_ROOT="/var/www/html"
 INSTALL_BUILD=HOME+"/web"
 
 
