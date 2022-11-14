@@ -79,9 +79,14 @@ h2{
 }
 
 
-section+section{
-    margin-top:50px;
+.personal-info{
+    margin-top:30px;
 }
+
+.personal-info.icons ul li{
+    list-style:none;
+}
+
 
 li{
     margin-top:10px;
@@ -108,9 +113,6 @@ ul#blog-index li{
     list-style:none;
 }
 
-#sobremi > ul > li{
-    list-style:none;
-}
 
 /* Estilo para enlaces */
 
