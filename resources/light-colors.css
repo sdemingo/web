@@ -1,0 +1,22 @@
+
+
+
+body{background-color:white;}
+
+.light {color:#565858;}
+
+.black{color:black;}
+
+a{color:#6e6e6e;}
+
+hr{background-color:silver;}
+
+.aviso{color: #565858;}
+
+code{color:#161527;}
+
+pre{border-color:silver; background:#F9F9F9;}
+
+pre code{color:black;}
+
+blockquote{border-left-color: #565858;}
