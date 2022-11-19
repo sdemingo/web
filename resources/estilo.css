@@ -27,7 +27,7 @@ body {
     max-width:900px;
     margin:0 auto;
     margin-bottom:100px;
-    background-color:white;
+/*    background-color:white;*/
     font-size:1.1em;
 }
 
@@ -53,20 +53,9 @@ header h1{
     margin-bottom:50px;
 }
 
-.light {
-    color:#565858;
-
-}
-
 .bold{
     font-weight:bold;
 }
-
-
-.black{
-    color:black;
-}
-
 
 .center{
     text-align: center;
@@ -117,7 +106,6 @@ ul#blog-index li{
 /* Estilo para enlaces */
 
 a{
-    color:#6e6e6e;
     text-decoration:underline;
 }
 
@@ -160,7 +148,6 @@ nav ul li, header+ul li{
 hr{
     margin:50px;
     border:none;
-    background-color:silver;
     height:1px;
 }
 
@@ -171,7 +158,6 @@ hr + p{
 
 .aviso{
     font-size:0.7em;
-    color: #565858;
 }
 
 
@@ -179,13 +165,11 @@ hr + p{
 
 code{
     font-size:1.1em;
-    color:#161527;
 }
 
 pre{
-    border:1px solid silver;
+    border:1px solid black;
     border-radius: 5px;
-    background:#F9F9F9;
     padding:5px;
     width:90%;
     margin:0 auto;
@@ -195,7 +179,6 @@ pre{
 
 pre code{
     font-size:1.0em;
-    color:black;
     font-weight:normal;
 }
 
@@ -204,7 +187,7 @@ pre code{
 blockquote{
     font-family:'Montserrat-Italic';
     padding:3px 10px;
-    border-left:3px solid #565858;
+    border-left:3px solid black;
 }
 
 
@@ -277,3 +260,34 @@ blockquote{
     }
 }
 
+
+
+
+
+
+
+/*  Colores  */
+
+body{background-color: #09081c;  color:silver;}
+
+h1,h2,h3{color:#f52402;}
+
+.light {color:#f52402;}
+
+.aviso{color: #f75940;}
+
+.black{color:#f58002;}
+
+li>i:first-child{color:#f58002;}
+
+a{color:#f58002;}
+
+hr{background-color:silver;}
+
+code{color:#bafbed;}
+
+pre{border-color:silver;background:#F9F9F9;}
+
+pre code{color:black;}
+
+blockquote{border-left-color: #f58002;}
