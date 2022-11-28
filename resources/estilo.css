@@ -226,13 +226,8 @@ blockquote{
 	    font-size:0.8em;
     }
 
-    /*
-    img{
-	    width:90%;
-    }
-   */   
     p.imagen{
-        max-with:90%;
+        max-width:90%;
     }
 }
 
@@ -259,12 +254,8 @@ blockquote{
 	    font-size:0.8em;
     }
 
-    /*img{
-	    width:90%;
-    }*/
-
     p.imagen{
-        max-with:90%;
+        max-width:90%;
     }
 
 }
