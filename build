@@ -133,6 +133,7 @@ def buildPost(post):
   # Build the HTML
   if fileChanged(pathFile,HTML_ROOT+HTML_BLOG+"/"+mdfile+".html"):
     htmlpost = markdown.markdown(mdcontent,extensions=['tables','fenced_code'])
+    htmlpost=htmlpost.replace("<p><img","<p class=\"imagen\"><img")
     html=postTemplate.substitute(post=htmlpost,post_title=title)
     with open(HTML_ROOT+HTML_BLOG+"/"+mdfile+".html","w") as fh:
       fh.write(html)
@@ -443,6 +444,14 @@ def buildCSS():
             dir2=HTML_ROOT)
   print ("Build estilo.css")
   os.system(cmd)
+
+
+def buildImages():
+  cmd="cp {dir1}/* {dir2}".format(
+            dir1=INSTALL_BUILD+"/img",
+            dir2=HTML_ROOT+"/img")
+  print ("Build images")
+  os.system(cmd)
   
   
 
@@ -464,6 +473,7 @@ if __name__=='__main__':
   if sys.argv[1]=="--blog":
     buildBlog()
     buildGemIndex()
+    buildImages()
     sys.exit(0)
 
   if sys.argv[1]=="--htmlonly":
@@ -472,6 +482,7 @@ if __name__=='__main__':
     buildHTMLIndex()
     buildCSS()
     buildFeed()
+    buildImages()
 
   if sys.argv[1]=="--all":
     buildBlog()
@@ -480,4 +491,5 @@ if __name__=='__main__':
     buildHTMLIndex()
     buildCSS()
     buildFeed()
+    buildImages()
 
