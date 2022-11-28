@@ -9,9 +9,10 @@ El caso es que, ese sistema que a mi se me parece a amontonar post-its digitales
 
 Si queréis ojear la aplicación o el código, lo tenéis todo en mi [github](https://github.com/sdemingo/notes)
 
-::: {.imagen}
+
 ![](../img/captura-notes.png)
-:::
+
+
 ---
 
 Diciembre 2021
