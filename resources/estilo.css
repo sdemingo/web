@@ -270,9 +270,9 @@ blockquote{
 
 body{background-color: #09081c;  color:silver;}
 
-h1,h2,h3{color:#f52402;}
+h1{color:#f52402;}
 
-.light {color:#f52402;}
+main h1, main h2 ,main h3{color:#bafbed;}
 
 .aviso{color: #f75940;}
 
