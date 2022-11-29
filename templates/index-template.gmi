@@ -24,7 +24,7 @@ De todo ello hablo con más o menos frecuencia tanto en mi blog personal:
 
 Otros enlaces sobre mi:
 
-=> http://texto-plano.xyz/~sdemingo web en texto-plano
+=> http://panicerror.org Mi web personal
 => http://github.com/sdemingo Mi Github
 
 
@@ -33,6 +33,7 @@ Para contactar conmigo puedes encontrarme en:
 * Por xmpp en sdemingo [arroba] suchat.org
 * Por correo en sdemingo [arroba] texto-plano.xyz
 * Por IRC soy sdemingo en irc.tilde.chat
+* Por mastodon soy sergo [arroba] social.linux.pizza
 
 
 
