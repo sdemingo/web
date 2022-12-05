@@ -119,6 +119,7 @@ def extractTitleFromMD(mdcontent):
 def buildPost(post):
   mdfile=post[0]
   date=post[1]
+  tags=post[2]
   
   pathFile="{dir}/{file}".format(dir=POSTS_ROOT,file=mdfile)
   f= open(pathFile)
@@ -151,7 +152,7 @@ def buildPost(post):
     
   # Add to the files info
   #mdcontent="".join(lines)
-  files.append((mdfile,title,date,mdcontent))
+  files.append((mdfile,title,date,mdcontent,tags))
 
     
 def fileChanged(f1,f2):
@@ -171,9 +172,10 @@ def buildHTMLIndexBlog():
   postsList=""
   for fileInfo in files:
     dt=datetime.strptime(fileInfo[2],"%d/%m/%Y")
-    post="<li><a href={url}.html>{text}</a><p class='date'>({date})</p></li>".format(
+    post="<li><a href={url}.html>{text}</a><p class='post-meta'>({date} - <span class='tags'>{tags}</span>)</p></li>".format(
       url=fileInfo[0],
       text=fileInfo[1],
+      tags=fileInfo[4].replace(",",", "),
       date=localeDate(dt.strftime("%B %Y")))
     postsList+="\n"+post
 
@@ -219,13 +221,16 @@ def getPosts():
     fields=re.sub(r'\s+'," ",line).split(" ")
     filename=""
     date=""
+    tags=""
     if len(fields)>0:
       date=fields[0].strip("\n")
       filename=fields[1].strip("\n")
+      tags=fields[2].strip("\n")
     else:
       filename=fields[0].strip("\n")
+
     if len(filename)>0:
-      posts.append([filename,date])
+      posts.append([filename,date,tags])
       
   return posts
 

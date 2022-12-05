@@ -81,10 +81,14 @@ li{
     margin-top:10px;
 }
 
-.date{
+.post-meta{
     font-size:0.7em;
     margin-top:5px;
     margin-left:15px;
+}
+
+.post-meta .tags{
+    font-style:italic;
 }
 
 
@@ -214,7 +218,7 @@ blockquote{
 	    font-size:1.8em;
     }
 
-    .date{
+    .post-meta{
 	    font-size:0.6em;
     }
 
@@ -242,7 +246,7 @@ blockquote{
 	    font-size:1.6em;
     }
 
-    .date{
+    .post-meta{
 	    font-size:0.6em;
     }
 
@@ -285,6 +289,8 @@ a{color:#f58002;}
 hr{background-color:silver;}
 
 code{color:#bafbed;}
+
+.post-meta{color:#6a697a;}
 
 pre{border-color:silver;background:#F9F9F9;}
 
