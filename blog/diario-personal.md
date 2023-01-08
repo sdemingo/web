@@ -97,9 +97,9 @@ menciones, imágenes incrustadas, etc. Por ahora, a mi este me sirve y me result
 Además y con idea de practicar mi Rust, he construido una pequeña aplicación
 llamada `journal` que me permite buscar entradas de días concretos, patrones o
 filtrar por etiquetas. Si os interesa la tenéis alojada en [mi
-github](https://github.com/sdemingo/journal). Si alguien está interesado en que
-describa por encima como la he hecho que me lo haga llegar por
-correo/mastodon/... y escribo una entrada sobre el tema.
+github](https://github.com/sdemingo/journal). Y si alguien está interesado en que
+describa algo más en detalle la aplicación que me lo haga saber por
+correo/mastodon/... y añado una entrada sobre el tema.
 
 
 
