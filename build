@@ -225,7 +225,8 @@ def getPosts():
     if len(fields)>0:
       date=fields[0].strip("\n")
       filename=fields[1].strip("\n")
-      tags=fields[2].strip("\n")
+      if len(fields)>2:
+        tags=fields[2].strip("\n")
     else:
       filename=fields[0].strip("\n")
 
