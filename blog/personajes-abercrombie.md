@@ -1,0 +1,19 @@
+# Abercrombie y sus personajes
+
+Si te gusta la fantasía y la novela fantástica ya conoces a Joe Abercrombie. Si no lo conoces entonces no te gusta este género ... o te estas perdiendo su mayor fenómeno en la última década. 
+No quiero convertir este artículo en una sesuda reseña de su obra o en una reflexión sobre su forma de escribir pero si me gustaría dejar aquí plasmado mis impresiones después de haber terminado su última trilogía titulada "La era de la locura" y que cierra (no sabemos si de forma definitiva) el ciclo de 9 libros sobre el universo con que saltó a la fama, el llamado *Círculo del Mundo*.
+
+Conocí a este escritor en el verano de 2013 cuando leí el primer libro de este ciclo titulado "La voz de las espadas". Recuerdo perfectamente la sensación cuando llevaba leído un tercio de la novela. El escritor te estaba contando algo que parecía ...la historia de siempre... pero de una forma totalmente nueva. Tanto el lenguaje, como las descripciones, los diálogos y sobre todo los personajes estaban elaborados de una forma novedosa y freca. Sobre todo estos últimos, porque si hay algo que este hombre a elevado a una categoría cumbre **son los personajes de sus historias**.
+
+En la novela fantástica, en mi opinión, siempre se ha partido de una premisa influenciada por el padre de todo el género. Sin duda Tolkien. La base de todo, el fundamento, la esencia es el universo. La tarea de lo que se ha venido a llamar *worldbuilding* era algo troncal en todas las novelas del género. Y si algo me ha gustado siempre de Abercrombie es la poca atención que presta a este respecto. Cuando dentro de la novela de género, donde las reglas suelen estar escritas y bien marcadas por un canon que los aficionados observan como las tablas de Moisés, surgen autores que, sin salirse de forma evidente, revolucionan y se rebelan de alguna manera contra sus antiguos, los aficionados lo agradecemos. Abercrombie ha construido su universo de una forma que cualquiera que haya leído tres libros te diría que es poco más que ligera. No existe una mitología claramente diferenciada, ni hay una descripción detalla de religiones y cultos predominantes. Las culturas y pueblos descritos no pueden ser más arquetípicos y a pesar de todo esto, les dota de un carisma muy marcado a nivel global. 
+
+Pero donde este hombre, como ya he dicho, nos mete tres goles por la escuadra es a la hora de montar sus personajes. Sobre esta base endeble y elaborada sin pretensiones (de forma totalmente deliberada) se levantan unos personajes enormes, gigantes, legendarios. Abercrombie nos ha legado una recua de personajes que pasarán a la historia del género, junto con frases icónicas que ya son parte de nosotros ... *"nunca se tienen demasiados cuchillos"*. De estos personajes no pueden surgir más que diálogos brutales, ingeniosos, llenos de un humor negro que te corroe como el ácido. Pueblan unas escenas que rebosan épica, escenas míticas que igualmente han pasado a formar parte del imaginario de todos sus aficionados.
+
+Quizá la faceta que más caracteriza a este autor ha sido la demistificación del genero. La nueva ola llamada *grimdark* que nos mostraba historias de fantasías cercanas a la realidad donde los personajes sufrían de penas y pasiones humanas, sangraban, morían en el barro y lloraban de dolor ha pasado a otro nivel con la llegada de Abercrombie. Sobre esto tenemos en Internet toneladas de bytes en forma de artículos, podcasts y videos. Personalmente yo quería dejar constancia simplemente de la enormidad de sus personajes y de como, saltándose a la torera una premisa del género como es la de construir un mundo sólido y profundo ha podido crear un ciclo de novelas de tanta calidad.
+
+
+*Si queréis empezar a leer a este gigante de la novela fantástica, lo mejor es usar [una guía de lectura](https://caballerodelarbolsonriente.blogspot.com/2016/07/como-leer-joe-abercrombie.html) que os oriente sobre su obra*.
+
+
+---
+Febrero 2023
