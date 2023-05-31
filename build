@@ -261,17 +261,18 @@ def buildFeed():
   fg.title('PanicError')
   fg.author( {'name':'sdemingo','email':'sdemingo@texto-plano.xyz'} )
   fg.language('es')
-  fg.id("http://texto-plano.xyz/~sdemingo/atom.xml")
+  fg.id("http://panicerror.org/blog/atom.xml")
   
   for fileInfo in files:
     fe = fg.add_entry()
-    url="http://"+urllib.parse.quote("texto-plano.xyz/~sdemingo/blog/"+fileInfo[0]+".html")
+    url="http://"+urllib.parse.quote("panicerror.org/blog/"+fileInfo[0]+".html")
     fe.id(url)
     fe.title(fileInfo[1])
     tdate=datetime.strptime(fileInfo[2],"%d/%m/%Y").replace(tzinfo=timezone.utc)
     fe.published(tdate)
     fe.updated(tdate)
     fe.content(url)
+    fe.content()
     fe.link(href=url)
   
   atomfeed = fg.atom_str(pretty=True)
