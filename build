@@ -257,7 +257,7 @@ def buildBlog(htmlonly=False):
 def buildFeed():
 
   fg = FeedGenerator()
-  fg.link( href='http://panicerror.org/atom.xml', rel='self' )
+  fg.link( href='http://panicerror.org/blog/atom.xml', rel='self' )
   fg.title('PanicError')
   fg.author( {'name':'sdemingo','email':'sdemingo@texto-plano.xyz'} )
   fg.language('es')
