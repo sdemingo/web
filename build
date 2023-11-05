@@ -132,8 +132,10 @@ def buildPost(post):
       return
 
   # Build the HTML
+  rawhtml=""
   if fileChanged(pathFile,HTML_ROOT+HTML_BLOG+"/"+mdfile+".html"):
-    htmlpost = markdown.markdown(mdcontent,extensions=['tables','fenced_code'])
+    rawhtml = markdown.markdown(mdcontent,extensions=['tables','fenced_code'])
+    htmlpost = rawhtml
     htmlpost=htmlpost.replace("<p><img","<p class=\"imagen\"><img")
     html=postTemplate.substitute(post=htmlpost,post_title=title)
     with open(HTML_ROOT+HTML_BLOG+"/"+mdfile+".html","w") as fh:
@@ -151,8 +153,7 @@ def buildPost(post):
     print ("Build "+mdfile+".gmi")
     
   # Add to the files info
-  #mdcontent="".join(lines)
-  files.append((mdfile,title,date,mdcontent,tags))
+  files.append((mdfile,title,date,mdcontent,tags,rawhtml))
 
     
 def fileChanged(f1,f2):
@@ -271,8 +272,7 @@ def buildFeed():
     tdate=datetime.strptime(fileInfo[2],"%d/%m/%Y").replace(tzinfo=timezone.utc)
     fe.published(tdate)
     fe.updated(tdate)
-    fe.content(url)
-    fe.content()
+    fe.content(fileInfo[5],type="html")
     fe.link(href=url)
   
   atomfeed = fg.atom_str(pretty=True)
