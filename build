@@ -132,16 +132,14 @@ def buildPost(post):
       return
 
   # Build the HTML
-  rawhtml=""
-  if fileChanged(pathFile,HTML_ROOT+HTML_BLOG+"/"+mdfile+".html"):
-    rawhtml = markdown.markdown(mdcontent,extensions=['tables','fenced_code'])
-    htmlpost = rawhtml
-    htmlpost=htmlpost.replace("<p><img","<p class=\"imagen\"><img")
-    html=postTemplate.substitute(post=htmlpost,post_title=title)
-    with open(HTML_ROOT+HTML_BLOG+"/"+mdfile+".html","w") as fh:
-      fh.write(html)
-      fh.close();
-    print ("Build "+mdfile+".html")
+  rawhtml = markdown.markdown(mdcontent,extensions=['tables','fenced_code'])
+  htmlpost = rawhtml
+  htmlpost=htmlpost.replace("<p><img","<p class=\"imagen\"><img")
+  html=postTemplate.substitute(post=htmlpost,post_title=title)
+  with open(HTML_ROOT+HTML_BLOG+"/"+mdfile+".html","w") as fh:
+    fh.write(html)
+    fh.close();
+  print ("Build "+mdfile+".html")
 
   # Build the Gemtext file
   if fileChanged(pathFile,GEM_ROOT+GEM_BLOG+"/"+mdfile+".gmi"):

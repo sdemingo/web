@@ -27,7 +27,6 @@ body {
     max-width:900px;
     margin:0 auto;
     margin-bottom:100px;
-/*    background-color:white;*/
     font-size:1.1em;
 }
 
@@ -270,27 +269,27 @@ blockquote{
 
 
 
+
 /*  Colores  */
 
-body{background-color: #09081c;  color:silver;}
 
-h1{color:#f52402;}
+body{background-color: white;  color:black;}
 
-main h1, main h2 ,main h3{color:#bafbed;}
+h1{color:#c41f04;} */
 
-.aviso{color: #f75940;}
+main h1, main h2 ,main h3{color:#c41f04;}
 
-.black{color:#f58002;}
+.aviso{color: #c41f04;}
 
-/*li>i:first-child{color:#f58002;}*/
+.black{color:#c41f04;}
 
-a{color:#f58002;}
+a{color:#c41f04;}
 
 hr{background-color:silver;}
 
-code{color:#bafbed;}
+code{color:#f58002;}
 
-.post-meta{color:#6a697a;}
+.post-meta{color:#737373;}
 
 pre{border-color:silver;background:#F9F9F9;}
 
