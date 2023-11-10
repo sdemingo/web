@@ -18,10 +18,8 @@ adecuado a tres variables que encontraremos en la parte superior del fichero
 
 ## Dependencias
 
-Para que este script funcione correctamente es necesario utilizarlo sobre un
-Linux convencional que debe tener instalado
-[`pandoc`](https://pandoc.org). Además hemos de tener las siguientes librerías
-de python disponibles en nuestro sistema:
+Para que este script funcione correctamente es necesario tener las siguientes
+librerías de python disponibles en nuestro sistema:
 
 - [md2gemini](https://pypi.org/project/md2gemini/)
 - lxml
