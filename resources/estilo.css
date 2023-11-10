@@ -75,6 +75,10 @@ h2{
     list-style:none;
 }
 
+.personal-info.icons ul li a{
+    font-family:'Roboto Mono Bold';
+}
+
 
 li{
     margin-top:10px;
@@ -102,6 +106,7 @@ ul ul > li:last-child{
 }
 
 ul#blog-index li{
+    font-family:'Roboto Mono Bold';
     list-style:none;
 }
 
@@ -132,6 +137,10 @@ p.imagen > img{
 
 /* Barra de enlaces  */
 /* NOTA: el selector header+ul solo se usa en los artículos del blog antiguo*/
+nav{
+    font-family:'Roboto Mono Bold';
+}
+
 nav ul, header+ul{
     text-align:center;
     margin-bottom:40px;

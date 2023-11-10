@@ -26,6 +26,8 @@ de python disponibles en nuestro sistema:
 - [md2gemini](https://pypi.org/project/md2gemini/)
 - lxml
 - beautifullsoup4
+- feedgen
+- markdown
 
 
 ## Configuración de la cuenta de goodreads
@@ -42,6 +44,7 @@ lasts="[url con la lista de los últimos libros]"
 Estas urls las puedes conseguir dentro de tu perfil, en la parte inferior de la
 página de "My Books". 
 
+
 ## Construcción y actualización
 
 Para incluir un nuevo post en el blog hemos de crear el fichero `.md` dentro del
@@ -51,7 +54,8 @@ directorio `/blog`y luego incluir el nombre del fichero al final del fichero
 - `build --blog`: Para construir el blog
 - `build --books`: Para construir la lista de últimas lecturas (solo si
   `goodreads.py` esta creado)
-- `build --all`: Para construirlo todo
+- `build --all`: Para construirlo tod
+- `build --htmlonly`: Para construir solo el HTML o la versión web
 
 
 ```
