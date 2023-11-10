@@ -21,7 +21,7 @@ líneas](https://github.com/sdemingo/web/blob/main/build) (que podría ser mucho
 más limpio y compacto) surgió esta web.
 
 Hoy he aprovechado a darle una capa de pintura nueva y actualizar algo la
-visualización. Así que aprovechando que tengo el salón recién pintado vengo ha
+visualización. Así que aprovechando que tengo el salón recién pintado vengo a
 hablaros de como funciona el invento y así, quien le apetezca tener un rincón
 personal, sencillo y práctico en Internet puede copiarme la idea. El script de
 construcción tiene la siguiente funcionalidad:
