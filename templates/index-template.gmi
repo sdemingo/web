@@ -1,14 +1,5 @@
 
-```
-
- ███████ ██████  ███████ ███    ███ ██ ███    ██  ██████   ██████  
- ██      ██   ██ ██      ████  ████ ██ ████   ██ ██       ██    ██ 
- ███████ ██   ██ █████   ██ ████ ██ ██ ██ ██  ██ ██   ███ ██    ██ 
-      ██ ██   ██ ██      ██  ██  ██ ██ ██  ██ ██ ██    ██ ██    ██ 
- ███████ ██████  ███████ ██      ██ ██ ██   ████  ██████   ██████  
-                                                                 
-```
-
+# sdemingo's capsule
 
 Bienvenido a mi cápsula gémini. Entre estas publicaciones encontrarás artículos sobre mis principales temas de interés:
 
@@ -32,8 +23,7 @@ Para contactar conmigo puedes encontrarme en:
 
 * Por xmpp en sdemingo [arroba] suchat.org
 * Por correo en sdemingo [arroba] texto-plano.xyz
-* Por IRC soy sdemingo en irc.tilde.chat
-* Por mastodon soy sergo [arroba] social.linux.pizza
+
 
 
 
