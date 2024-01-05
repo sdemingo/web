@@ -8,3 +8,7 @@ He estado leyendo tanto en Mastodon como en algunos grupos de Telegram como últ
 Viéndolo ahora, dos años después, veo que la cosa no ha ido tan mal. Algunas paranoias, mucho artículo sobre libros, algo sobre bicis y cosas así. Lo que viene siendo mi vida cotidiana realmente. Poco más que añadir por ahora. Felicitarme a mi mismo por la iniciativa y por seguir por aquí con ganas de ir dejando registradas mis movidas y animaros a todos a que escribáis. Donde sea y como sea pero escribid, porque arregla muchas cosas.
 
 
+
+---
+
+Enero 2024
