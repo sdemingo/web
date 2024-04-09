@@ -22,6 +22,7 @@ from bs4 import BeautifulSoup
 from feedgen.feed import FeedGenerator
 import urllib.parse
 import markdown
+import csv
 
 HOME=os.getenv("HOME")
 
@@ -293,90 +294,89 @@ def buildFeed():
 ##
 
 def getReads(url):
+  # headers = {
+  #   'Host': 'www.goodreads.com',
+  #   'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:124.0) Gecko/20100101 Firefox/124.0',
+  #   'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
+  #   'Accept-Language': 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3',
+  #   'Accept-Encoding': 'gzip, deflate, br',
+  #   'Connection': 'keep-alive',
+  #   'Upgrade-Insecure-Requests': '1',
+  #   'Cookie': 'ccsid=513-7344316-9593545; logged_out_browsing_page_count=2; locale=es; _session_id2=3c52e8aa844832b8d6a7072283351fad',
+  #   'Sec-Fetch-Dest': 'document',
+  #   'Sec-Fetch-Mode': 'navigate',
+  #   'Sec-Fetch-Site': 'cross-site',
+  #   'If-None-Match': 'W/"8254b0bef4fe9c48e58b12951beff728"'
+  # } 
+  # reads=[]
+  # result = requests.get(url,headers=headers)
+  # if (result.status_code == 200):
+  #   soup = BeautifulSoup(result.content,"xml")
+  #   for item in soup.findAll("item"):
+  #     title=item.title.text
+  #     imglink=item.book_medium_image_url.text
+  #     booklink=item.link.text
+  #     author=item.author_name.text
+  #     description=item.book_description.text
+  #     read_at=item.user_read_at.text
+  #     reads.append((title,author,imglink,booklink,description,read_at))
+  #     print ("Recupero de goodreads: {title}".format(title))
+  #     # Fields:
+  #     # 0:title
+  #     # 1:author
+  #     # 2:link to cover
+  #     # 3:link to the book in goodreads
+  #     # 4:description
+  #     # 5:end reading date
+  # else:
+  #   print ("Error code {} for {}".format(result.status_code,url))
 
 
-  headers = {
-
-
-    'Host': 'www.goodreads.com',
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:124.0) Gecko/20100101 Firefox/124.0',
-    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
-    'Accept-Language': 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3',
-    'Accept-Encoding': 'gzip, deflate, br',
-    'Connection': 'keep-alive',
-    'Upgrade-Insecure-Requests': '1',
-    'Cookie': 'ccsid=513-7344316-9593545; logged_out_browsing_page_count=2; locale=es; _session_id2=3c52e8aa844832b8d6a7072283351fad',
-    'Sec-Fetch-Dest': 'document',
-    'Sec-Fetch-Mode': 'navigate',
-    'Sec-Fetch-Site': 'cross-site',
-    'If-None-Match': 'W/"8254b0bef4fe9c48e58b12951beff728"'
-  }
- 
   reads=[]
-  result = requests.get(url,headers=headers)
-  if (result.status_code == 200):
-    soup = BeautifulSoup(result.content,"xml")
-    for item in soup.findAll("item"):
-      title=item.title.text
-      imglink=item.book_medium_image_url.text
-      booklink=item.link.text
-      author=item.author_name.text
-      description=item.book_description.text
-      read_at=item.user_read_at.text
-      reads.append((title,author,imglink,booklink,description,read_at))
-      print ("Recupero de goodreads: {title}".format(title))
-      # Fields:
-      # 0:title
-      # 1:author
-      # 2:link to cover
-      # 3:link to the book in goodreads
-      # 4:description
-      # 5:end reading date
-  else:
-    print ("Error code {} for {}".format(result.status_code,url))
+  with open(HOME+"/notebook/libros/ficcion.csv") as csv_file:
+    csv_reader = list(reversed(list(csv.reader(csv_file, delimiter=';'))))[:20]
+    for row in csv_reader:
+      if len(row)>2:
+        reads.append((row[0].strip(),row[1].strip(),row[2].strip()))
   return reads
 
 
-def buildTableHTML(reads):
-  readsHTML=""
-  for r in reads:
-    html="""
-    <tr>
-    <td><img src='{img}'/></td>
-    <td class='title'>{title} - <span class='author'>{author}</span></td>
-    </tr>
-    """.format(author=r[1],title=r[0],img=r[2],desc=r[4])
-    readsHTML+=html
-  return readsHTML
+# def buildTableHTML(reads):
+#   readsHTML=""
+#   for r in reads:
+#     html="""
+#     <tr>
+#     <td><img src='{img}'/></td>
+#     <td class='title'>{title} - <span class='author'>{author}</span></td>
+#     </tr>
+#     """.format(author=r[1],title=r[0],img=r[2],desc=r[4])
+#     readsHTML+=html
+#   return readsHTML
         
 
 def buildListHTML(reads):
   readsHTML=""
   for r in reads:
-    if r[5]!="":
-      datef=r[5].split(" ")
-      html="<li>{title} - <span class='author'>{author}</span> <span class='bookdate'>({date})</span></li>".format(
-        author=r[1],title=r[0],date=" ".join(datef[2:4]))
-      readsHTML+=html
+    html="<li>{title} - <span class='author'>{author}</span> <span class='bookdate'>({date})</span></li>".format(
+        author=r[1],title=r[0],date=r[2])
+    readsHTML+=html
   return readsHTML
 
 
-def buildTableGemText(reads):
-  readstext=""
-  for r in reads:
-    text="* {title} - {author}\n\n".format(author=r[1],title=r[0])
-    readstext+=text
-  return readstext
+# def buildTableGemText(reads):
+#   readstext=""
+#   for r in reads:
+#     text="* {title} - {author}\n\n".format(author=r[1],title=r[0])
+#     readstext+=text
+#   return readstext
 
 
 def buildListGemText(reads):
   readstext=""
   for r in reads:
-    if r[5]!="":
-      datef=r[5].split(" ")
-      text="* {title} - {author} ({date})\n".format(
-        author=r[1],title=r[0],date=" ".join(datef[2:4]))
-      readstext+=text
+    text="* {title} - {author} ({date})\n".format(
+      author=r[1],title=r[0],date=r[2])
+    readstext+=text
   return readstext
 
 
@@ -386,28 +386,28 @@ def buildBooks(htmlonly=False):
     return
   
   todayDate=datetime.today().strftime("%d/%m/%Y")
-  curReads=getReads(currently)
+  #curReads=getReads(currently)
   lastReads=getReads(lasts)
-  currTable=buildTableHTML(curReads)
-  lastList=buildListHTML(lastReads[:20])
+  #currTable=buildTableHTML(curReads)
+  lastList=buildListHTML(lastReads)
 
   with open(HTML_TEMPLATE_BOOKS) as t:
     strTmpl=t.read()
     tmpl=Template(strTmpl)
-    html=tmpl.substitute(current=currTable,lasts=lastList,lastDate=todayDate)
+    html=tmpl.substitute(lasts=lastList,lastDate=todayDate)
     
     with open(HTML_FILE_BOOKS,"w") as o:
       o.write(html)
       print ("Build books.html")
 
-    currTable=buildTableGemText(curReads)
+    #currTable=buildTableGemText(curReads)
     lastList=buildListGemText(lastReads[:20])
 
   if (not htmlonly):
     with open(GEM_TEMPLATE_BOOKS) as t:
       strTmpl=t.read()
       tmpl=Template(strTmpl)
-      html=tmpl.substitute(current=currTable,lasts=lastList,lastDate=todayDate)
+      html=tmpl.substitute(lasts=lastList,lastDate=todayDate)
 
       with open(GEM_FILE_BOOKS,"w") as o:
         o.write(html)
@@ -493,7 +493,7 @@ if __name__=='__main__':
     sys.exit(0)
 
   if sys.argv[1]=="--books":
-    #buildBooks()
+    buildBooks()
     sys.exit(0)
 
   if sys.argv[1]=="--blog":
@@ -504,7 +504,7 @@ if __name__=='__main__':
 
   if sys.argv[1]=="--htmlonly":
     buildBlog(True)
-    #buildBooks(True)
+    buildBooks(True)
     buildHTMLIndex()
     buildCSS()
     buildFeed()
@@ -512,7 +512,7 @@ if __name__=='__main__':
 
   if sys.argv[1]=="--all":
     buildBlog()
-    #buildBooks()
+    buildBooks()
     buildGemIndex()
     buildHTMLIndex()
     buildCSS()
