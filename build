@@ -293,8 +293,27 @@ def buildFeed():
 ##
 
 def getReads(url):
+
+
+  headers = {
+
+
+    'Host': 'www.goodreads.com',
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:124.0) Gecko/20100101 Firefox/124.0',
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
+    'Accept-Language': 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3',
+    'Accept-Encoding': 'gzip, deflate, br',
+    'Connection': 'keep-alive',
+    'Upgrade-Insecure-Requests': '1',
+    'Cookie': 'ccsid=513-7344316-9593545; logged_out_browsing_page_count=2; locale=es; _session_id2=3c52e8aa844832b8d6a7072283351fad',
+    'Sec-Fetch-Dest': 'document',
+    'Sec-Fetch-Mode': 'navigate',
+    'Sec-Fetch-Site': 'cross-site',
+    'If-None-Match': 'W/"8254b0bef4fe9c48e58b12951beff728"'
+  }
+ 
   reads=[]
-  result = requests.get(url)
+  result = requests.get(url,headers=headers)
   if (result.status_code == 200):
     soup = BeautifulSoup(result.content,"xml")
     for item in soup.findAll("item"):
@@ -305,6 +324,7 @@ def getReads(url):
       description=item.book_description.text
       read_at=item.user_read_at.text
       reads.append((title,author,imglink,booklink,description,read_at))
+      print ("Recupero de goodreads: {title}".format(title))
       # Fields:
       # 0:title
       # 1:author
@@ -312,6 +332,8 @@ def getReads(url):
       # 3:link to the book in goodreads
       # 4:description
       # 5:end reading date
+  else:
+    print ("Error code {} for {}".format(result.status_code,url))
   return reads
 
 
@@ -368,7 +390,6 @@ def buildBooks(htmlonly=False):
   lastReads=getReads(lasts)
   currTable=buildTableHTML(curReads)
   lastList=buildListHTML(lastReads[:20])
-
 
   with open(HTML_TEMPLATE_BOOKS) as t:
     strTmpl=t.read()
@@ -472,7 +493,7 @@ if __name__=='__main__':
     sys.exit(0)
 
   if sys.argv[1]=="--books":
-    buildBooks()
+    #buildBooks()
     sys.exit(0)
 
   if sys.argv[1]=="--blog":
@@ -483,7 +504,7 @@ if __name__=='__main__':
 
   if sys.argv[1]=="--htmlonly":
     buildBlog(True)
-    buildBooks(True)
+    #buildBooks(True)
     buildHTMLIndex()
     buildCSS()
     buildFeed()
@@ -491,7 +512,7 @@ if __name__=='__main__':
 
   if sys.argv[1]=="--all":
     buildBlog()
-    buildBooks()
+    #buildBooks()
     buildGemIndex()
     buildHTMLIndex()
     buildCSS()

@@ -10,7 +10,6 @@ Bienvenido a mi cápsula gémini. Entre estas publicaciones encontrarás artícu
 De todo ello hablo con más o menos frecuencia tanto en mi blog personal:
 
 => blog/index.gmi Blog personal (Último post: $last)
-=> books.gmi Mis últimas lecturas
 => ring.gmi  Cápsulas amigas
 
 Otros enlaces sobre mi:
