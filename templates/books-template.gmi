@@ -3,6 +3,10 @@
 
 =>index.gmi Inicio
 
+## Ahora mismo estoy leyendo
+
+$cur
+
 ## Estas son mis últimas lecturas
 
 $lasts

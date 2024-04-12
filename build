@@ -350,13 +350,14 @@ def buildBooks(htmlonly=False):
       o.write(html)
       print ("Build books.html")
 
-    lastList=buildListGemText(lastReads[:20])
+    lastList=buildListGemText(lastReads)
+    curList=buildListGemText(curReads)
 
   if (not htmlonly):
     with open(GEM_TEMPLATE_BOOKS) as t:
       strTmpl=t.read()
       tmpl=Template(strTmpl)
-      html=tmpl.substitute(lasts=lastList,lastDate=todayDate)
+      html=tmpl.substitute(lasts=lastList,cur=curList,lastDate=todayDate)
 
       with open(GEM_FILE_BOOKS,"w") as o:
         o.write(html)
