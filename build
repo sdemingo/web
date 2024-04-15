@@ -293,6 +293,10 @@ def buildFeed():
 ##
 ##
 
+def date_from_row(row):
+    return datetime.strptime(row[2], '%d/%m/%y')
+
+
 def getReads():
   reads=[]
   currently=[]
@@ -302,6 +306,15 @@ def getReads():
     for row in csv_reader:
       if len(row)>2:
         reads.append((row[0].strip(),row[1].strip(),row[2].strip()))
+
+  with open(HOME+"/notebook/libros/noficcion.csv") as csv_file:
+    csv_reader = list(reversed(list(csv.reader(csv_file, delimiter=';'))))[:10]
+    for row in csv_reader:
+      if len(row)>2:
+        reads.append((row[0].strip(),row[1].strip(),row[2].strip()))
+
+  # Ordenar array de filas (de ficción y no ficción) por fecha
+  reads = sorted(reads, key=date_from_row,reverse=True)[:10]
 
   with open(HOME+"/notebook/libros/ultimos.csv") as csv_file:
     csv_reader = list(reversed(list(csv.reader(csv_file, delimiter=';'))))[:20]
