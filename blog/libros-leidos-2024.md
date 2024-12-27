@@ -36,7 +36,7 @@ A principios de este año dejé de usar Goodreads. Al terminar el año solía pu
 * ⭐ Un caballero en Moscú - Amor Towles
 * Escribir ficción - Gotham Writer's Workshop
 * ⭐ El nombre de la rosa - Umberto Eco
-
+* La invención de todas las cosas - Jorge Volpi
 
 Algunas como *El nombre de la Rosa* o *La conjura de los necios* han sido relecturas. A pesar de ello, los marco porque he disfrutado de ellos más incluso que la primera vez que los leí. Mención aparte para *Príncipes de Maine ...* y *Un caballero en Moscú* que han sido sin duda ninguna mis mejores lecturas del año. De las decepciones, que también las ha habido en esa lista, prefiero no hablar mucho. Mejor olvidar y a otra cosa.
 
