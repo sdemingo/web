@@ -41,3 +41,8 @@ A principios de este año dejé de usar Goodreads. Al terminar el año solía pu
 Algunas como *El nombre de la Rosa* o *La conjura de los necios* han sido relecturas. A pesar de ello, los marco porque he disfrutado de ellos más incluso que la primera vez que los leí. Mención aparte para *Príncipes de Maine ...* y *Un caballero en Moscú* que han sido sin duda ninguna mis mejores lecturas del año. De las decepciones, que también las ha habido en esa lista, prefiero no hablar mucho. Mejor olvidar y a otra cosa.
 
 Y por supuesto, aprovecho para felicitaros la Navidad y el año nuevo a todos. ¡Feliz Navidad!
+
+
+---
+
+Diciembre 2024
