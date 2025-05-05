@@ -6,7 +6,7 @@ Internet se ha vuelto un lugar muy diferente durante estos 25 años que ahora so
 
 >¿Callarme yo? Antes muerto.
 
-Por todo ello me he dado cuenta que no me ha costado nada abandonar unos espacios en los que nunca he llegado a estar cómodo del todo. Donde siempre me sentí un poco extraño y torpe. No pretendo juzgar a nadie ni espero que nadie se sienta juzgado por este texto. Quien se sienta o se haya sentido cómodo en esos mundos es normal que no quiera abandonarlos y pretenda permanecer en ellos e incluso hacerlos mejores. En mi caso nunca fue así y por eso me voy. Será la edad.
+Por todo ello me he dado cuenta que no me ha costado nada abandonar unos espacios en los que nunca he llegado a estar cómodo del todo. Donde siempre me sentí un poco extraño y torpe. A Bluesky, Threads o similares ni me planteo entrar porque es evidente que son la misma idea con diferente formato. No pretendo juzgar a nadie ni espero que nadie se sienta juzgado por este texto. Quien se sienta o se haya sentido cómodo en esos mundos es normal que no quiera abandonarlos y pretenda permanecer en ellos e incluso pretender hacerlos mejores. En mi caso nunca fue así y por eso me voy. Será la edad.
 
 ---
 
