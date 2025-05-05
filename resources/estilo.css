@@ -54,6 +54,10 @@ header h1{
     margin-bottom:50px;
 }
 
+main#reads p{
+    margin-top:50px;
+}
+
 .bold{
     font-weight:bold;
 }

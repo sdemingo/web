@@ -300,18 +300,28 @@ def date_from_row(row):
 def getReads():
   reads=[]
   currently=[]
+  cur_year=str(datetime.today().year).removeprefix("20")
+  cur_year_books=0
 
   with open(HOME+"/notebook/libros/ficcion.csv") as csv_file:
-    csv_reader = list(reversed(list(csv.reader(csv_file, delimiter=';'))))[:10]
+    csv_reader = list(reversed(list(csv.reader(csv_file, delimiter=';'))))
     for row in csv_reader:
-      if len(row)>2:
+      if len(row)>2 and row[2].strip()!="-":
         reads.append((row[0].strip(),row[1].strip(),row[2].strip()))
+        if "/"+cur_year in row[2].strip():
+          cur_year_books+=1
+
 
   with open(HOME+"/notebook/libros/noficcion.csv") as csv_file:
-    csv_reader = list(reversed(list(csv.reader(csv_file, delimiter=';'))))[:10]
+    csv_reader = list(reversed(list(csv.reader(csv_file, delimiter=';'))))
     for row in csv_reader:
-      if len(row)>2:
+      if len(row)>2 and row[2].strip()!="-":
         reads.append((row[0].strip(),row[1].strip(),row[2].strip()))
+        if "/"+cur_year in row[2].strip():
+          cur_year_books+=1
+
+  #print("/"+cur_year)
+  #print(cur_year_books)
 
   # Ordenar array de filas (de ficción y no ficción) por fecha
   reads = sorted(reads, key=date_from_row,reverse=True)[:10]
@@ -322,7 +332,7 @@ def getReads():
       if len(row)>2:
         currently.append((row[0].strip(),row[1].strip()))
 
-  return (reads,currently)
+  return (reads[:20],currently[:20],cur_year_books)
 
 
 def buildListHTML(reads):
@@ -350,14 +360,14 @@ def buildListGemText(reads):
 def buildBooks(htmlonly=False):
 
   todayDate=datetime.today().strftime("%d/%m/%Y")
-  (lastReads,curReads)=getReads()
+  (lastReads,curReads,readsInYear)=getReads()
   lastList=buildListHTML(lastReads)
   curList=buildListHTML(curReads)
 
   with open(HTML_TEMPLATE_BOOKS) as t:
     strTmpl=t.read()
     tmpl=Template(strTmpl)
-    html=tmpl.substitute(lasts=lastList,cur=curList,lastDate=todayDate)
+    html=tmpl.substitute(lasts=lastList,cur=curList,lastDate=todayDate,reads=readsInYear)
     
     with open(HTML_FILE_BOOKS,"w") as o:
       o.write(html)
