@@ -320,9 +320,6 @@ def getReads():
         if "/"+cur_year in row[2].strip():
           cur_year_books+=1
 
-  #print("/"+cur_year)
-  #print(cur_year_books)
-
   # Ordenar array de filas (de ficción y no ficción) por fecha
   reads = sorted(reads, key=date_from_row,reverse=True)[:10]
 
@@ -338,9 +335,6 @@ def getReads():
 def buildListHTML(reads):
   readsHTML=""
   for r in reads:    
-    if (len(r)>2):
-      readsHTML+="<li>{title} - <span class='author'>{author}</span> <span class='bookdate'>({date})</span></li>".format(author=r[1],title=r[0],date=r[2])
-    else:
       readsHTML+="<li>{title} - <span class='author'>{author}</span></li>".format(author=r[1],title=r[0])      
 
   return readsHTML

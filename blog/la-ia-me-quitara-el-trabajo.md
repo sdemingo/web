@@ -1,0 +1,20 @@
+
+
+# La IA me quitará el trabajo
+
+Quizá no a corto plazo pero llevo unos meses dándole vueltas y cada día que pasa soy mas pesimista con este asunto. Soy profesor y últimamente es raro que el tema de «chatgepeté» no se cuele en alguna conversación durante mi jornada. Siempre he sido de los que intentaban aparentar moderación con el tema, actitud descreída y mucho escepticismo pero estoy a poco de claudicar. Durante los muchos paseos que me doy por la sala de profesores durante una semana de trabajo normal percibo que cada vez es mas frecuente ver a compañeros tirar de la IA para multitud de tareas: preparar material de prácticas, apuntes, exámenes, etc. Evidentemente todos estamos de acuerdo en que el trabajo que te genera debe ser revisado pero todos tenemos la sensación de que es muy parecido a lo que debe ser tener un ayudante al que encargar tareas de recopilación, compilación y creación de borradores. Siempre hemos buscado en Google para apoyarnos en nuestro trabajo pero ahora estos sistemas te simplifican el trabajo hasta límites que muchas veces te cuesta creer.
+
+Soy un firme detractor del uso de estos sistemas, vaya por delante esto. Si estás a favor de su uso no encontrarás en mi ni un solo argumento que apoye tu tesis. Todo el trabajo que pueden ahorrarte en tareas tediosas no compensa los recursos humanos o energéticos que se dedican a alimentar estos monstruos a nivel global. Pero algo ha cambiado en mi percepción con respecto a hace unos meses. Ahora estoy empezando a percibir que tendrán un fuerte impacto en nuestro mercado laboral. No tengo intención de generar un análisis sesudo y transversal del impacto de la IA en la organización del trabajo en la próxima década. Simplemente pretendo reducirlo al contexto que mejor conozco, el de la educación secundaria.
+
+La educación presencial puede estar (por ahora) a salvo de esta primera ola. El profesorado de este tipo de alumnado está y estará centrado en la gestión del alumno durante sus horas de clase. Dirigiendo gran parte de su esfuerzo en mantenerlos sentados y con un mínimo de interés. Pero estoy convencido de que la IA se irá colando cada vez mas en las clases. Y no solo de forma indirecta como ahora (en apuntes, exámenes, ejercicios y otros materiales suministrados por el profesorado) sino en el transcurso de la propia clase. Estamos a «dos cafés» de que aparezca una nueva metodología pedagógica basada en este monstruo: IA Learning, IA Teaching o cualquier otra mierda similar que nos traigan los grandes gurús educativos a los institutos a través de todos esos asesores liberados. Imagino alumnos pidiendo explicaciones, desarrollos, ejercicios y esquemas a una IA con un profesor para coordinarlo todo. A bote pronto permitiría reducir la carga de trabajo directa y aumentar la ratio de alumnos por profesor. Eso sería un ahorro a costa de un evidente empeoramiento en la calidad educativa, aunque eso ya importe menos.
+
+Respecto a la educación a distancia de la que también estoy cada vez más convencido que irá creciendo en los próximos años, la IA tendrá un papel central. Este tipo de educación focalizada en alumnos cercanos a la mayoría de edad o incluso mayores estará totalmente sustentada en estos sistemas de los cuales, el profesorado difícilmente podrá prescindir si quiere dar soporte a la gran ratio de alumnos que le será asignada. 
+
+Mi percepción ha cambiado drásticamente con este tema. El debate ya no es si debemos dejar entrar la IA en el aula o no. Si estás ahí sigues en 2023. La IA ha entrado en tu aula y está por cada rincón. Impregna cada ejercicio que propones a tus alumnos, cada práctica o cada escenario que requieres que te entreguen solucionado. Tus apuntes son resumidos, analizados y esquematizados por ella. También lo son tus esquemas y tus resúmenes. Platos cocinados por ti que son vueltos a cocinar por ella a las órdenes de tus alumnos. Quizás estoy siendo demasiado pesimista pero no puedo evitar acordarme de los Borg y de su famoso meme: *You will be assimilated. Resistance is futile.*
+
+
+![](../img/borg-resistance-futile.jpg)
+
+---
+
+Mayo 2025
