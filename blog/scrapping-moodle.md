@@ -7,7 +7,7 @@ Hoy en día extraer información usando *scripts* automatizados no es muy difíc
 
 Como la información no era algo que necesitara tener de forma apremiante, construí mi script para incluir latencias aleatorias de varios segundos entre peticiones y así evitar llamar mucho la atención. También evité tener que ejecutar toda la extracción de una vez y elaboré un mecanismo para poder ir lanzándola a ratos y que esta fuera descargándose en periodos separados durante varios días.
 
-Os dejo una pequeña muestra sobre como usar crear un manejar una sesión autenticada sobre la que solicitar las páginas situadas tras el formulario de inicio de sesión.
+Os dejo una pequeña muestra sobre como crear y manejar una sesión autenticada con la que solicitar las páginas situadas tras el formulario de inicio de sesión.
 
 
 
