@@ -323,7 +323,7 @@ def getReads():
   # Ordenar array de filas (de ficción y no ficción) por fecha
   reads = sorted(reads, key=date_from_row,reverse=True)[:10]
 
-  with open(HOME+"/notebook/libros/ultimos.csv") as csv_file:
+  with open(HOME+"/notebook/libros/leyendo/ultimos.csv") as csv_file:
     csv_reader = list(reversed(list(csv.reader(csv_file, delimiter=';'))))[:20]
     for row in csv_reader:
       if len(row)>2:
