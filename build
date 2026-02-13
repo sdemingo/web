@@ -297,6 +297,28 @@ def date_from_row(row):
     return datetime.strptime(row[2], '%d/%m/%y')
 
 
+def procesa_libro_leyendo(filename,fecha_formateada):
+        titulo=""
+        autor=""
+        origen=""
+        with open(HOME+"/notebook/libros/leyendo/"+filename,"r") as f:
+            lineas=f.readlines()
+            if (len(lineas)>=1):
+                titulo=lineas[0].strip("#\n ")
+
+            if (len(lineas)>=2):
+                autor=lineas[1].strip("\n ")
+
+            if (len(lineas)>=3):
+                origen=lineas[2].strip("\n ")
+
+            f.close()
+        
+        return (titulo,autor,fecha_formateada,origen)
+        
+
+
+
 def getReads():
   reads=[]
   currently=[]
@@ -323,11 +345,29 @@ def getReads():
   # Ordenar array de filas (de ficción y no ficción) por fecha
   reads = sorted(reads, key=date_from_row,reverse=True)[:10]
 
-  with open(HOME+"/notebook/libros/leyendo/ultimos.csv") as csv_file:
-    csv_reader = list(reversed(list(csv.reader(csv_file, delimiter=';'))))[:20]
-    for row in csv_reader:
-      if len(row)>2:
-        currently.append((row[0].strip(),row[1].strip()))
+  # Relleno currently con los libros leyendo actualmente
+  for filename in os.listdir(os.path.expanduser(HOME+"/notebook/libros/leyendo")):
+    try:
+      try:
+        # Extraemos solo los primeros 14 caracteres si el nombre es YmdHMS
+        fecha_obj = datetime.strptime(filename[:14], "%Y%m%d%H%M%S")
+        fecha_formateada = fecha_obj.strftime("%d/%m/%y")
+      except ValueError:
+        continue  # El fichero no es de registro de libro y se ignora
+
+      datos_libro=procesa_libro_leyendo(filename,fecha_formateada)
+      currently.append((datos_libro[0], datos_libro[1]))
+
+    except Exception as e:
+      print (e)
+      continue
+
+
+  # with open(HOME+"/notebook/libros/leyendo/ultimos.csv") as csv_file:
+  #   csv_reader = list(reversed(list(csv.reader(csv_file, delimiter=';'))))[:20]
+  #   for row in csv_reader:
+  #     if len(row)>2:
+  #       currently.append((row[0].strip(),row[1].strip()))
 
   return (reads[:20],currently[:20],cur_year_books)
 
