@@ -4,7 +4,7 @@
 # y para actualizar los index tanto de gémini como de la versión web
 # 
 # Dependencias: (pip3 install ...)
-#  - md2gemini
+#  - md2gemini X
 #  - lxml
 #  - beautifulsoup4
 #  - feedgen
@@ -15,7 +15,7 @@ from datetime import datetime, timezone
 import os
 import sys
 import re
-from md2gemini import md2gemini
+#from md2gemini import md2gemini
 from string import Template
 import requests
 from bs4 import BeautifulSoup
@@ -143,13 +143,13 @@ def buildPost(post):
   print ("Build "+mdfile+".html")
 
   # Build the Gemtext file
-  if fileChanged(pathFile,GEM_ROOT+GEM_BLOG+"/"+mdfile+".gmi"):
-    gem=md2gemtext(pathFile)
+  # if fileChanged(pathFile,GEM_ROOT+GEM_BLOG+"/"+mdfile+".gmi"):
+  #   gem=md2gemtext(pathFile)
     
-    with open(GEM_ROOT+GEM_BLOG+"/"+mdfile+".gmi","w") as fg:
-      fg.write(gem)
-      fg.close()
-    print ("Build "+mdfile+".gmi")
+  #   with open(GEM_ROOT+GEM_BLOG+"/"+mdfile+".gmi","w") as fg:
+  #     fg.write(gem)
+  #     fg.close()
+  #   print ("Build "+mdfile+".gmi")
     
   # Add to the files info
   files.append((mdfile,title,date,mdcontent,tags,rawhtml))
