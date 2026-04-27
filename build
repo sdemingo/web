@@ -4,7 +4,6 @@
 # y para actualizar los index tanto de gémini como de la versión web
 # 
 # Dependencias: (pip3 install ...)
-#  - md2gemini X
 #  - lxml
 #  - beautifulsoup4
 #  - feedgen
@@ -15,7 +14,6 @@ from datetime import datetime, timezone
 import os
 import sys
 import re
-#from md2gemini import md2gemini
 from string import Template
 import requests
 from bs4 import BeautifulSoup
@@ -26,18 +24,9 @@ import csv
 
 HOME=os.getenv("HOME")
 
-
-##
-## Variables de ubicación del blog
-##
-GEM_ROOT=HOME+"/gemini"
 HTML_ROOT="/var/www/html"
 INSTALL_BUILD=HOME+"/web"
 
-
-##
-## Otras variables
-##
 GEM_BLOG="/blog"
 HTML_BLOG="/blog"
 
@@ -47,15 +36,8 @@ POSTS_INDEX=POSTS_ROOT+"/INDEX"
 HTML_FILE_BOOKS=HTML_ROOT+"/books.html"
 HTML_TEMPLATE_BOOKS=INSTALL_BUILD+"/templates/books-template.html"
 
-GEM_FILE_BOOKS=GEM_ROOT+"/books.gmi"
-GEM_TEMPLATE_BOOKS=INSTALL_BUILD+"/templates/books-template.gmi"
-
-GEM_INDEX_FILE=GEM_ROOT+"/index.gmi"
-GEM_TEMPLATE_INDEX=INSTALL_BUILD+"/templates/index-template.gmi"
-
 HTML_TEMPLATE_BLOG=INSTALL_BUILD+"/templates/blog-template.html"
 HTML_TEMPLATE_BLOG_POST=INSTALL_BUILD+"/templates/blog-post-template.html"
-GEM_TEMPLATE_BLOG=INSTALL_BUILD+"/templates/blog-template.gmi"
 
 
 
@@ -66,46 +48,6 @@ GEM_TEMPLATE_BLOG=INSTALL_BUILD+"/templates/blog-template.gmi"
 ##
 
 files=[]
-
-def md2gemtext(filename):
-  internal_link = '=>(.+)\.md\.html(.+)\.md\.html'
-  index_link = '=>.+index.html'
-  index_upper_link = '\* Inicio\[\d+\]'
-  title_head = '%(.+)'
-  date_sign = '\-{3}\n+(\w+ \d{4})'
-  month=""
-
-  with open(filename, "r") as f:
-    markdown=f.read()
-
-    # Quito y extraigo la firma de la fecha del markdown original:
-    matches = re.search(date_sign, markdown, re.MULTILINE)
-    if matches!=None:
-      month=matches.group(1)
-    markdown = re.sub(date_sign,"",markdown, re.MULTILINE)
-
-    # Genero el codigo gemini
-    gemini = md2gemini(markdown, links="at-end")
-
-    # Saneo gemini para cambiar:
-    # - Quito el % del primer título y lo convierto a #
-    gemini = re.sub(title_head,"#\g<1>",gemini)
-
-    # - Enlaces a otros artículos del propio blog
-    gemini = re.sub(internal_link,"=>\g<1>.md.gmi \g<2>.md.gmi",gemini)
-
-    # - Cambio los enlaces a index
-    #gemini = re.sub(index_link,"=> ../index.gmi Inicio",gemini)
-    gemini = re.sub(index_link,"",gemini)
-    gemini = re.sub(index_upper_link,"",gemini)
-
-    # - Añado al final de los enlaces la firma
-    if month!="":
-      gemini +="\n\n\n=> ../index.gmi Inicio\n"
-      gemini +="\n---\n\n"
-      gemini +=month+"\n\n"
-
-  return gemini
 
 
 def extractTitleFromMD(mdcontent):
@@ -142,16 +84,6 @@ def buildPost(post):
     fh.close();
   print ("Build "+mdfile+".html")
 
-  # Build the Gemtext file
-  # if fileChanged(pathFile,GEM_ROOT+GEM_BLOG+"/"+mdfile+".gmi"):
-  #   gem=md2gemtext(pathFile)
-    
-  #   with open(GEM_ROOT+GEM_BLOG+"/"+mdfile+".gmi","w") as fg:
-  #     fg.write(gem)
-  #     fg.close()
-  #   print ("Build "+mdfile+".gmi")
-    
-  # Add to the files info
   files.append((mdfile,title,date,mdcontent,tags,rawhtml))
 
     
@@ -188,26 +120,6 @@ def buildHTMLIndexBlog():
       o.write(html)
       o.close()
       print ("Build blog.html")
-      
-
-       
-def buildGemIndexBlog():
-  postsList=""
-  for fileInfo in files:
-    post="=>{url}.gmi {text}".format(
-      url=fileInfo[0],
-      text=fileInfo[1].strip("\n"))
-    postsList+="\n"+post
-
-  with open(GEM_TEMPLATE_BLOG) as t:
-    strTmpl=t.read()
-    tmpl=Template(strTmpl)
-    gmi=tmpl.substitute(posts=postsList)
-    
-    with open(GEM_ROOT+GEM_BLOG+"/index.gmi","w") as o:
-      o.write(gmi)
-      o.close()
-      print ("Build blog.gmi")
      
   
         
@@ -240,18 +152,12 @@ def getPosts():
 def buildBlog(htmlonly=False):
   if not os.path.exists(HTML_ROOT+HTML_BLOG):
     os.makedirs(HTML_ROOT+HTML_BLOG)
-        
-  if not os.path.exists(GEM_ROOT+GEM_BLOG):
-    os.makedirs(GEM_ROOT+GEM_BLOG)
 
   posts=getPosts()
   for post in posts:
     buildPost(post)
 
   buildHTMLIndexBlog()
-  if (not htmlonly):
-    buildGemIndexBlog()
-
 
 
 def buildFeed():
@@ -362,13 +268,6 @@ def getReads():
       print (e)
       continue
 
-
-  # with open(HOME+"/notebook/libros/leyendo/ultimos.csv") as csv_file:
-  #   csv_reader = list(reversed(list(csv.reader(csv_file, delimiter=';'))))[:20]
-  #   for row in csv_reader:
-  #     if len(row)>2:
-  #       currently.append((row[0].strip(),row[1].strip()))
-
   return (reads[:20],currently[:20],cur_year_books)
 
 
@@ -379,16 +278,6 @@ def buildListHTML(reads):
 
   return readsHTML
 
-
-def buildListGemText(reads):
-  readstext=""
-  for r in reads:
-    if (len(r)>2):
-      text="* {title} - {author} ({date})\n".format(author=r[1],title=r[0],date=r[2])
-    else:
-      text="* {title} - {author}\n".format(author=r[1],title=r[0])
-    readstext+=text
-  return readstext
 
 
 def buildBooks(htmlonly=False):
@@ -406,20 +295,6 @@ def buildBooks(htmlonly=False):
     with open(HTML_FILE_BOOKS,"w") as o:
       o.write(html)
       print ("Build books.html")
-
-    lastList=buildListGemText(lastReads)
-    curList=buildListGemText(curReads)
-
-  if (not htmlonly):
-    with open(GEM_TEMPLATE_BOOKS) as t:
-      strTmpl=t.read()
-      tmpl=Template(strTmpl)
-      html=tmpl.substitute(lasts=lastList,cur=curList,lastDate=todayDate)
-
-      with open(GEM_FILE_BOOKS,"w") as o:
-        o.write(html)
-        print ("Build books.gmi")
-
 
 
 
@@ -451,16 +326,16 @@ def localeDate(dstr):
   return dstr
 
 
-def buildGemIndex():
-  todayDate=datetime.today().strftime("%d %b %Y").replace("Jan","Ene").replace("Apr","Abr").replace("Dec","Dic")    
-  with open(GEM_TEMPLATE_INDEX) as t:
-    strTmpl=t.read()
-    tmpl=Template(strTmpl)
-    html=tmpl.substitute(last=todayDate)
+# def buildGemIndex():
+#   todayDate=datetime.today().strftime("%d %b %Y").replace("Jan","Ene").replace("Apr","Abr").replace("Dec","Dic")    
+#   with open(GEM_TEMPLATE_INDEX) as t:
+#     strTmpl=t.read()
+#     tmpl=Template(strTmpl)
+#     html=tmpl.substitute(last=todayDate)
 
-    with open(GEM_INDEX_FILE,"w") as o:
-      o.write(html)
-      print ("Build index.gmi")
+#     with open(GEM_INDEX_FILE,"w") as o:
+#       o.write(html)
+#       print ("Build index.gmi")
 
              
 def buildHTMLIndex():
@@ -501,7 +376,6 @@ if __name__=='__main__':
 
   if sys.argv[1]=="--blog":
     buildBlog()
-    buildGemIndex()
     buildImages()
     sys.exit(0)
 
@@ -516,7 +390,6 @@ if __name__=='__main__':
   if sys.argv[1]=="--all":
     buildBlog()
     buildBooks()
-    buildGemIndex()
     buildHTMLIndex()
     buildCSS()
     buildFeed()
