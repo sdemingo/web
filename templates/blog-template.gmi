@@ -1,9 +1,0 @@
-
-# sdemingo's capsule
-
-## Blog
-
-=> ../index.gmi Inicio
-
-
-$posts
