@@ -1,0 +1,13 @@
+# Espacios sin niños
+
+Hace unos días leí un artículo, de esos despistados que se te cuelan por las grietas, donde hablaban de que cada vez son más aquellos que deciden casarse y organizar una boda «sin niños». La reflexión sobre los espacios libres de niños siempre me han fascinado, sobre todo cuando aparecen en el ámbito de amistades o familiares. Los argumentos que se suelen esgrimir suelen repetirse de forma muy predecible: ya nadie tiene aguante para nada, los niños no tienen que estar siempre con los adultos, esto es por egoísmo de los jóvenes de hoy en día, los niños ahora son unos maleducados, mi libertad, la libertad de mis hijos, etc.... Por último alguien siempre, siempre, siempre, llega la comparación entre niños y perros. Lo cuál suele disparar la conversación a otro nivel.
+
+Inicio esta reflexión sobre mi opinión sobre estos «espacios sin niños», por si alguno quiere ya dejar de leer: **estoy totalmente a favor de que existan y de participar en todos los que pueda**. Y digo esto siendo padre de dos chavales y profesor desde hace más de veinte años (vamos, que algo se sobre muchachos). Los niños, y con esto creo que no descubro nada a nadie, son generalmente molestos. Sí, los tuyos también lo son aunque creas que no. Sobre todo cuando no estás delante. Y son molestos porque son niños y tienen que serlo. Si fueran adultos sería raro y desconcertante pero el caso es que no lo son. Son niños y se comportan como tales.
+
+Saber y entender esto tampoco nos debe dar carta blanca para convertir a nuestros chavales en auténticos gilipollas, dejando que vaguen por el mundo como el caballo de Atila. Pero siempre se ha de entender que son niños. Niños. No adultos. Una correcta educación en el civismo siempre debe pasar por explicarles y hacerles entender que en un contexto social sus acciones tienen consecuencias sobre el resto y trasladarles una idea de empatía sobre los demás ante sus acciones. Pero sin olvidar nunca lo anterior. Dicho lo cual, puedo entender y entiendo perfectamente a la gente que no quiere compartir espacios y ocio con los hijos de los demás. Bien porque no tenga niños a su cargo o bien, porque los tengan y con los suyos sea más que suficiente. 
+
+Por otro lado, una boda declarada como «espacio sin niños» me parece una de las mejores ideas que ha dado la última década. Si eres como yo y aborreces estos eventos, con esta restricción te dan una excusa genial para evitar una fiesta carísima a la que nunca pediste ir. Y si por el contrario, eres de los que disfruta de estos *saraos* carísimos, podrás estar seguro de que amortizarás con creces tu colaboración a la economía familiar de los novios pegándote un buena fiesta al margen de los chavales.
+
+---
+
+Mayo 2026
