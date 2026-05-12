@@ -42,7 +42,7 @@ header h1{
 }
 
 #blog-post{
-    margin-top:100px;
+    margin-top:50px;
     margin-left:70px;
     margin-right:70px;
 }
@@ -64,7 +64,7 @@ main section#signs{
 
 main section#signs img{
     display: inline-block;
-    margin: 10px;
+    margin: 5px;
 }
 
 main#reads p{
