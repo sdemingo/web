@@ -54,6 +54,19 @@ header h1{
     margin-bottom:50px;
 }
 
+main section#signs{
+    margin:0 auto;
+    width:25%;
+    text-align: center;
+    vertical-align:middle;
+    padding: 20px;    
+}
+
+main section#signs img{
+    display: inline-block;
+    margin: 10px;
+}
+
 main#reads p{
     margin-top:50px;
 }
@@ -284,6 +297,15 @@ blockquote{
     #blog-post{
         margin-right:5px;
         margin-left:5px;
+    }
+
+    main section#signs{
+        width:90%;
+        padding: 5px;    
+    }
+
+    main section#signs img{
+        max-width:20%;
     }
 
 }

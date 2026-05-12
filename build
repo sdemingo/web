@@ -326,16 +326,6 @@ def localeDate(dstr):
   return dstr
 
 
-# def buildGemIndex():
-#   todayDate=datetime.today().strftime("%d %b %Y").replace("Jan","Ene").replace("Apr","Abr").replace("Dec","Dic")    
-#   with open(GEM_TEMPLATE_INDEX) as t:
-#     strTmpl=t.read()
-#     tmpl=Template(strTmpl)
-#     html=tmpl.substitute(last=todayDate)
-
-#     with open(GEM_INDEX_FILE,"w") as o:
-#       o.write(html)
-#       print ("Build index.gmi")
 
              
 def buildHTMLIndex():
