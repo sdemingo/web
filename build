@@ -27,10 +27,11 @@ HOME=os.getenv("HOME")
 HTML_ROOT="/var/www/html"
 INSTALL_BUILD=HOME+"/web"
 
-GEM_BLOG="/blog"
 HTML_BLOG="/blog"
+HTML_STATIC="/static"
 
 POSTS_ROOT=INSTALL_BUILD+"/blog"
+STATIC_ROOT=INSTALL_BUILD+"/static"
 POSTS_INDEX=POSTS_ROOT+"/INDEX"
 
 HTML_FILE_BOOKS=HTML_ROOT+"/books.html"
@@ -47,8 +48,8 @@ HTML_TEMPLATE_BLOG_POST=INSTALL_BUILD+"/templates/blog-post-template.html"
 ##
 ##
 
-files=[]
-
+post_files=[]
+static_files=[]
 
 def extractTitleFromMD(mdcontent):
     regex = r"^# (.+)"
@@ -84,7 +85,31 @@ def buildPost(post):
     fh.close();
   print ("Build "+mdfile+".html")
 
-  files.append((mdfile,title,date,mdcontent,tags,rawhtml))
+  post_files.append((mdfile,title,date,mdcontent,tags,rawhtml))
+
+
+
+def buildStatic(mdfile):
+
+  pathFile="{dir}/{file}".format(dir=STATIC_ROOT,file=mdfile)
+  f= open(pathFile)
+  mdcontent=f.read()
+  title=extractTitleFromMD(mdcontent).strip("#")
+
+  with open(HTML_TEMPLATE_BLOG_POST) as t:  # Usamos la misma plantilla que para los artículos del blog
+    postTemplate=Template(t.read())
+    if postTemplate=="":
+      return
+
+  # Build the HTML
+  rawhtml = markdown.markdown(mdcontent,extensions=['tables','fenced_code'])
+  htmlpost = rawhtml
+  htmlpost=htmlpost.replace("<p><img","<p class=\"imagen\"><img")
+  html=postTemplate.substitute(post=htmlpost,post_title=title)
+  with open(HTML_ROOT+HTML_STATIC+"/"+mdfile+".html","w") as fh:
+    fh.write(html)
+    fh.close();
+  print ("Build "+mdfile+".html")
 
     
 def fileChanged(f1,f2):
@@ -100,9 +125,9 @@ def fileChanged(f1,f2):
 
 
 def buildHTMLIndexBlog():
-  files.reverse()
+  post_files.reverse()
   postsList=""
-  for fileInfo in files:
+  for fileInfo in post_files:
     dt=datetime.strptime(fileInfo[2],"%d/%m/%Y")
     post="<li><a href={url}.html>{text}</a><p class='post-meta'>({date} - <span class='tags'>{tags}</span>)</p></li>".format(
       url=fileInfo[0],
@@ -148,7 +173,6 @@ def getPosts():
   return posts
 
 
-
 def buildBlog(htmlonly=False):
   if not os.path.exists(HTML_ROOT+HTML_BLOG):
     os.makedirs(HTML_ROOT+HTML_BLOG)
@@ -160,8 +184,19 @@ def buildBlog(htmlonly=False):
   buildHTMLIndexBlog()
 
 
-def buildFeed():
 
+
+def buildStatics():
+  if not os.path.exists(HTML_ROOT+HTML_STATIC):
+    os.makedirs(HTML_ROOT+HTML_STATIC)
+
+  statics = [f for f in os.listdir(STATIC_ROOT)]
+  for static in statics:
+    buildStatic(static)
+
+
+
+def buildFeed():
   fg = FeedGenerator()
   fg.link( href='http://panicerror.org/blog/atom.xml', rel='self' )
   fg.title('PanicError')
@@ -169,7 +204,7 @@ def buildFeed():
   fg.language('es')
   fg.id("http://panicerror.org/blog/atom.xml")
   
-  for fileInfo in files:
+  for fileInfo in post_files:
     fe = fg.add_entry()
     url="http://"+urllib.parse.quote("panicerror.org/blog/"+fileInfo[0]+".html")
     fe.id(url)
@@ -371,6 +406,7 @@ if __name__=='__main__':
 
   if sys.argv[1]=="--htmlonly":
     buildBlog(True)
+    buildStatics()
     buildBooks(True)
     buildHTMLIndex()
     buildCSS()
@@ -379,6 +415,7 @@ if __name__=='__main__':
 
   if sys.argv[1]=="--all":
     buildBlog()
+    buildStatics()
     buildBooks()
     buildHTMLIndex()
     buildCSS()
