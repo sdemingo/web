@@ -386,6 +386,13 @@ def buildImages():
   print ("Build images")
   os.system(cmd)
   
+
+def buildFonts():
+  cmd="cp -r {dir1}/* {dir2}".format(
+            dir1=INSTALL_BUILD+"/resources/fonts",
+            dir2=HTML_ROOT+"/fonts")
+  print ("Build fonts")
+  os.system(cmd)
   
 
 if __name__=='__main__':
@@ -412,6 +419,7 @@ if __name__=='__main__':
     buildCSS()
     buildFeed()
     buildImages()
+    buildFonts()
 
   if sys.argv[1]=="--all":
     buildBlog()
@@ -421,4 +429,5 @@ if __name__=='__main__':
     buildCSS()
     buildFeed()
     buildImages()
+    buildFonts()
 

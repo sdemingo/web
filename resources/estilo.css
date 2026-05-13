@@ -1,28 +1,23 @@
 
 /* Estilos generales */
 @font-face{
-    font-family:'Roboto Mono';
-    src:url(fonts/RobotoMono/RobotoMono-Light.ttf);
+    font-family:'Titulo secundario';
+    src:url(fonts/RobotoMono/RobotoMono-Regular.ttf);
 }
 
 @font-face{
-    font-family:'Roboto Mono Bold';
+    font-family:'Titulo principal';
     src:url(fonts/RobotoMono/RobotoMono-Bold.ttf);
 }
 
-
 @font-face{
-    font-family:'Montserrat';
-    src:url(fonts/Montserrat/Montserrat-Regular.ttf);
+    font-family:'Texto';
+    src:url(fonts/Noto/NotoSans-Light.ttf);
 }
 
-@font-face{
-    font-family:'Montserrat-Italic';
-    src:url(fonts/Montserrat/Montserrat-Italic.ttf);
-}
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Texto', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     width:65%;
     max-width:900px;
     margin:0 auto;
@@ -36,7 +31,7 @@ header {
 }
 
 header h1{
-    font-family:'Roboto Mono Bold';
+    font-family:'Titulo principal';
     text-align:center;
     font-size:2.2em;
 }
@@ -48,9 +43,8 @@ header h1{
 }
 
 #blog-post > h1{
-    font-family:'Roboto Mono Bold';
-    text-align:center;
-    font-size:1.6em;
+    font-family:'Titulo secundario';
+    font-size:1.8em;
     margin-bottom:50px;
 }
 
@@ -82,7 +76,7 @@ main#reads p{
 
 h2{
     font-weight: normal;
-    font-family: 'Roboto Mono Bold';
+    font-family: 'Titulo secundario';
 }
 
 
@@ -95,7 +89,7 @@ h2{
 }
 
 .personal-info.icons ul li a{
-    font-family:'Roboto Mono Bold';
+    font-family:'Titulo secundario';
 }
 
 
@@ -125,21 +119,17 @@ ul ul > li:last-child{
 }
 
 ul#blog-index li{
-    font-family:'Roboto Mono Bold';
+    font-family:'Titulo secundario';
     list-style:none;
 }
 
 
 /* Estilo para enlaces */
 
+
 a{
-    text-decoration:underline;
+    text-decoration:none;
 }
-
-a:hover{
-    text-decoration:underline;
-}
-
 
 /* Estilos para imagenes */
 p.imagen{
@@ -157,7 +147,7 @@ p.imagen > img{
 /* Barra de enlaces  */
 /* NOTA: el selector header+ul solo se usa en los artículos del blog antiguo*/
 nav{
-    font-family:'Roboto Mono Bold';
+    font-family:'Titulo secundario';
 }
 
 nav ul, header+ul{
@@ -215,7 +205,6 @@ pre code{
 
 /*  Estilo para anotaciones  */
 blockquote{
-    font-family:'Montserrat-Italic';
     padding:3px 10px;
     border-left:3px solid black;
 }
