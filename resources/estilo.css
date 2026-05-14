@@ -103,10 +103,6 @@ li{
     margin-left:15px;
 }
 
-.post-meta .tags{
-    font-style:italic;
-}
-
 
 #blog-post p{
     line-height:1.4;
@@ -184,7 +180,7 @@ hr + p{
 /* Estilo de código preformateado */
 
 code{
-    font-size:1.1em;
+    font-size:1.3em;
 }
 
 pre{
