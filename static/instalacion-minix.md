@@ -1,6 +1,8 @@
 
 # Instalación de Minix
 
+>AVISO: Este tutorial es muy antiguo y la información aquí recogida puede estar muy desactualizada.
+
 
 ## 1. Introducción
 

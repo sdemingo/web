@@ -2,6 +2,8 @@
 
 # Breve introducción a Python
 
+>AVISO: Este tutorial es muy antiguo y la información aquí recogida puede estar muy desactualizada.
+
 Este tutorial esta basado en Python 2.6 que suele estar instalada de
 serie en cualquier distribución de Linux moderna. Para realizar un
 primer script en Python usaremos el siguiente esqueleto de archivo:

@@ -2,6 +2,8 @@
 
 # Buscando ficheros con find
 
+>AVISO: Este tutorial es muy antiguo y la información aquí recogida puede estar muy desactualizada.
+
 Find es un comando para buscar ficheros en Unix. Find busca y encuentra
 ficheros según los valores asociados a una serie de reglas predefinidas
 por el. Para tener un conocimiento de todas sus reglas y de los posibles

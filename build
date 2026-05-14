@@ -185,7 +185,6 @@ def buildBlog(htmlonly=False):
 
 
 
-
 def buildStatics():
   if not os.path.exists(HTML_ROOT+HTML_STATIC):
     os.makedirs(HTML_ROOT+HTML_STATIC)
@@ -359,7 +358,6 @@ def localeDate(dstr):
   for i,j in months.items():
     dstr = dstr.replace(i,j)
   return dstr
-
 
 
              
