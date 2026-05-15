@@ -30,7 +30,7 @@ embargo, diferentes heurísticas con las que poder aproximar esta cantidad que
 varia aproximadamente desde cero hasta más/menos 15 minutos y que para complicar
 más las cosas, hemos de recalcular cada pocos años.
 
-![img](../res/ecuacion-tiempo.jpg)
+![](../img/ecuacion-tiempo.png)
 
 Buscando un rato encontré hasta tres heurísticas que aproximan la diferencia
 bastante bien. La gráfica muestra una de ellas y, en ella, se puede observar

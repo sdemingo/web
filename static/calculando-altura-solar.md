@@ -20,7 +20,7 @@ ecuación de tiempo del anterior artículo](calculando-la-hora-exacta.md.html). 
 conocida la sombra que este proyecta sobre el suelo, medida en el mediodía
 solar, nos será fácil conocer dicho ángulo usando trigonometría básica.
 
-![img](../res/altura-solar-anual.jpg)
+![](../img/altura-solar-anual.png)
 
 Desde un punto de vista numérico, he calculado ambas coordenadas a través de
 otras no relativas a la posición del observador como son las denominadas

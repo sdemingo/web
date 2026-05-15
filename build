@@ -199,11 +199,11 @@ def buildFeed():
   fg = FeedGenerator()
   fg.link( href='http://panicerror.org/blog/atom.xml', rel='self' )
   fg.title('PanicError')
-  fg.author( {'name':'sdemingo','email':'sdemingo@texto-plano.xyz'} )
+  fg.author( {'name':'sdemingo','email':'sdemingo@gmail.com'} )
   fg.language('es')
   fg.id("http://panicerror.org/blog/atom.xml")
   
-  for fileInfo in post_files:
+  for fileInfo in reversed(post_files):
     fe = fg.add_entry()
     url="http://"+urllib.parse.quote("panicerror.org/blog/"+fileInfo[0]+".html")
     fe.id(url)
@@ -408,16 +408,6 @@ if __name__=='__main__':
     buildBlog()
     buildImages()
     sys.exit(0)
-
-  if sys.argv[1]=="--htmlonly":
-    buildBlog(True)
-    buildStatics()
-    buildBooks(True)
-    buildHTMLIndex()
-    buildCSS()
-    buildFeed()
-    buildImages()
-    buildFonts()
 
   if sys.argv[1]=="--all":
     buildBlog()

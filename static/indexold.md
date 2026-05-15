@@ -22,6 +22,11 @@
     -   [Guardando marcadores en Org-mode](guardar-marcadores-en-orgmode.md.html)
     -   [Configurar el Tabbar Mode en Emacs](configurando-tabbar-mode-emacs.md.html)
 
+* Sobre Astronomía:
+    -   [Calculando la altura del sol](calculando-altura-solar.md.html)
+    -   [Calculando las horas de luz solar](calculando-horas-luz-solar.md.html)
+    -   [Calculando la hora exacta](calculando-la-hora-exacta.md.html)
+        
 * Otros artículos realmente antiguos que he encontrado buceando en mis
 discos:
 

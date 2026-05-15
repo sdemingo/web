@@ -15,7 +15,7 @@ podéis ver en la gráfica. Es significativo la desviación entre Hora Civil y
 Solar sobre todo en verano, debido al debido al huso horario seguido por España,
 que se corresponde con Europa Central.
 
-![img](../res/orto-ocaso-anual.jpg)
+![](../img/orto-ocaso-anual.png)
 
 Ahora mismo estoy intentando dibujar posiciones de cuerpos celestes usando
 coordenadas horizontales sobre el plano en una [proyección esterográfica](http://es.wikipedia.org/wiki/Proyecci%C3%B3n_estereogr%C3%A1fica). Estoy
