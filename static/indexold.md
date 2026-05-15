@@ -31,5 +31,6 @@
 discos:
 
     -   [Instalación de MINIX en un 486 SX (año 2001)](instalacion-minix.md.html)
+    -   [Programación de un PIC16F84 (año 2003)](programacion-pic1684.md.html)
     -   [Breve tutorial del comando find (año 2007)](tutorial-find.md.html)
     -   [Breve introducción a Python 2.6 (año 2009)](tutorial-python26.md.html)
