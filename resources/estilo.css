@@ -61,6 +61,13 @@ main section#signs img{
     margin: 5px;
 }
 
+main#reads h1{
+    font-family:'Titulo secundario';
+    font-size:1.8em;
+    margin-top:100px;
+    margin-bottom:50px;
+}
+
 main#reads p{
     margin-top:50px;
 }

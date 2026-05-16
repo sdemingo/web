@@ -405,6 +405,11 @@ if __name__=='__main__':
     buildBooks()
     sys.exit(0)
 
+  if sys.argv[1]=="--css":
+    buildCSS()
+    buildFonts()
+    sys.exit(0)
+
   if sys.argv[1]=="--blog":
     buildBlog()
     buildImages()
