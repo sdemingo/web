@@ -203,7 +203,7 @@ def buildFeed():
   fg.language('es')
   fg.id("http://panicerror.org/blog/atom.xml")
   
-  for fileInfo in reversed(post_files):
+  for fileInfo in reversed(post_files[:25]): # solo incluyo los últimos 25 post en el feed
     fe = fg.add_entry()
     url="http://"+urllib.parse.quote("panicerror.org/blog/"+fileInfo[0]+".html")
     fe.id(url)
@@ -211,7 +211,8 @@ def buildFeed():
     tdate=datetime.strptime(fileInfo[2],"%d/%m/%Y").replace(tzinfo=timezone.utc)
     fe.published(tdate)
     fe.updated(tdate)
-    fe.content(fileInfo[5],type="html")
+    content=re.sub(r"<h1>.+</h1>","",fileInfo[5],1)
+    fe.content(content,type="html")
     fe.link(href=url)
   
   atomfeed = fg.atom_str(pretty=True)
