@@ -127,9 +127,19 @@ def fileChanged(f1,f2):
 def buildHTMLIndexBlog():
   post_files.reverse()
   postsList=""
+  year_print=""
+  cur_year = datetime.today().year
+
   for fileInfo in post_files:
     dt=datetime.strptime(fileInfo[2],"%d/%m/%Y")
-    post="<li><a href={url}.html>{text}</a><p class='post-meta'>({date} - <span class='tags'>{tags}</span>)</p></li>".format(
+    year_post=dt.strftime("%Y")
+    
+    if (year_post != year_print):
+        year_print=year_post
+        if (year_print != str(cur_year)):
+            postsList+="<h2 class='year'>{year}</h2>\n".format(year=year_print)
+
+    post="<a href={url}.html>{text}</a><p class='post-meta'>({date} - <span class='tags'>{tags}</span>)</p></li>".format(
       url=fileInfo[0],
       text=fileInfo[1],
       tags=fileInfo[4].replace(",",", "),

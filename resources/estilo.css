@@ -115,15 +115,26 @@ li{
     line-height:1.4;
 }
 
+
+#blog-index a{
+    font-family:'Titulo secundario';
+    list-style:none;
+}
+
+#blog-index .year{
+    margin-top:50px;
+}
+
+#blog-index{
+    margin-left:40px;
+    margin-top:90px;
+}
+
+
 /* Estilo para listas anidadas */
 
 ul ul > li:last-child{
     margin-bottom:30px;
-}
-
-ul#blog-index li{
-    font-family:'Titulo secundario';
-    list-style:none;
 }
 
 
@@ -233,6 +244,10 @@ blockquote{
         max-width:20%;
     }
 
+    #blog-index{
+        margin-left:20px;
+    }
+
 }
 
 
@@ -274,6 +289,10 @@ blockquote{
 
     main section#signs img{
         max-width:20%;
+    }
+
+    #blog-index{
+        margin-left:20px;
     }
 
 }
@@ -319,6 +338,10 @@ blockquote{
         max-width:20%;
     }
 
+    #blog-index{
+        margin-left:5px;
+    }
+
 }
 
 
@@ -352,6 +375,8 @@ hr{background-color:silver;}
 code{color:#f58002;}
 
 .post-meta{color:#737373;}
+
+.year{color:#737373; border-bottom:1px solid silver;}
 
 pre{border-color:silver;background:#F9F9F9;}
 
