@@ -40,6 +40,7 @@ HTML_TEMPLATE_BOOKS=INSTALL_BUILD+"/templates/books-template.html"
 HTML_TEMPLATE_BLOG=INSTALL_BUILD+"/templates/blog-template.html"
 HTML_TEMPLATE_BLOG_POST=INSTALL_BUILD+"/templates/blog-post-template.html"
 
+BOOKS_LIST_SIZE=20
 
 
 ##
@@ -294,7 +295,7 @@ def getReads():
           cur_year_books+=1
 
   # Ordenar array de filas (de ficción y no ficción) por fecha
-  reads = sorted(reads, key=date_from_row,reverse=True)[:10]
+  reads = sorted(reads, key=date_from_row,reverse=True)[:BOOKS_LIST_SIZE]
 
   # Relleno currently con los libros leyendo actualmente
   for filename in os.listdir(os.path.expanduser(HOME+"/notebook/libros/leyendo")):
