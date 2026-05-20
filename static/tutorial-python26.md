@@ -98,7 +98,7 @@ else:
 Tanto el `else` como su bloque de instrucciones son siempre optativos.
 
 
-## Instrucciones iterativas {#inst.-iterativas .unnumbered}
+## Instrucciones iterativas 
 Por un lado tenemos la instrucción `while`:
 
 ```

@@ -9,7 +9,6 @@
     -   [Interfaces y wrappers en Go](interfaces-wrappers-go.md.html)
     -   [Creando una aplicación web con Go (I)](web-app-en-go-1.md.html)
     -   [Creando una aplicación web con Go (II)](web-app-en-go-2.md.html)
-    -   [Evaluando expresiones con un AST en Go](expresiones-ast.md.html)
 
 * Sobre redes:
 

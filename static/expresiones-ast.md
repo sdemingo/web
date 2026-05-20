@@ -21,9 +21,7 @@ pruebas y realizar un análisis de código más avanzado, refactorizaciones, etc
 Para que os hagáis una idea de la estructura devuelta por el parser, a
 continuación os muestro el AST construido a partir de la expresión: `((3*2) + 1 - (5*2))`
 
-::: {.imagen}
 ![](../img/ast.jpg)
-:::
 
 En el árbol se pueden ver las siguientes estructuras:
 

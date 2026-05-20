@@ -20,9 +20,7 @@ diferentes según la dirección IP de estos. En mi caso, estas salidas a Interne
 estaban en subredes diferentes pero también podían haber estado en la misma
 subred.
 
-::: {.imagen}
 ![](../img/routing.jpg)
-:::
 
 El descubrimiento para solucionar esto ha sido el comando [`ip`](http://linux.die.net/man/8/ip) que permite
 manipular muchas más opciones de encaminamiento que el clásico [`route`](http://linux.die.net/man/8/route). La

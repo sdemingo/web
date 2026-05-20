@@ -426,6 +426,13 @@ if __name__=='__main__':
     buildImages()
     sys.exit(0)
 
+  if sys.argv[1]=="--static":
+    buildStatics()
+    buildCSS()
+    buildImages()
+    buildFonts()
+    sys.exit(0)
+
   if sys.argv[1]=="--all":
     buildBlog()
     buildStatics()
